@@ -1,0 +1,29 @@
+{
+  "crmwebApp": {
+    "efLockerLocation": {
+      "home": {
+        "title": "Ef Locker Locations",
+        "createLabel": "Create a new Ef Locker Location",
+        "createOrEditLabel": "Create or edit a Ef Locker Location",
+        "notFound": "No Ef Locker Locations found"
+      },
+      "created": "A new Ef Locker Location is created with identifier {{ param }}",
+      "updated": "A Ef Locker Location is updated with identifier {{ param }}",
+      "deleted": "A Ef Locker Location is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ef Locker Location {{ id }}?"
+      },
+      "detail": {
+        "title": "Ef Locker Location"
+      },
+      "efLockerCode": "Ef Locker Code",
+      "regionEng": "Region Eng",
+      "areaEng": "Area Eng",
+      "fullAddressEng": "Full Address Eng",
+      "regionChi": "Region Chi",
+      "areaChi": "Area Chi",
+      "fullAddressChi": "Full Address Chi",
+      "subsItemDelivery": "Subs Item Delivery"
+    }
+  }
+}

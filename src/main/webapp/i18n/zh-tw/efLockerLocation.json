@@ -1,0 +1,29 @@
+{
+  "crmwebApp": {
+    "efLockerLocation": {
+      "home": {
+        "title": "Ef Locker Locations",
+        "createLabel": "建立一筆新的 Ef Locker Location",
+        "createOrEditLabel": "建立或編輯 Ef Locker Location",
+        "notFound": "No Ef Locker Locations found"
+      },
+      "created": "新的 Ef Locker Location 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Ef Locker Location 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Ef Locker Location 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Ef Locker Location {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Ef Locker Location"
+      },
+      "efLockerCode": "Ef Locker Code",
+      "regionEng": "Region Eng",
+      "areaEng": "Area Eng",
+      "fullAddressEng": "Full Address Eng",
+      "regionChi": "Region Chi",
+      "areaChi": "Area Chi",
+      "fullAddressChi": "Full Address Chi",
+      "subsItemDelivery": "Subs Item Delivery"
+    }
+  }
+}

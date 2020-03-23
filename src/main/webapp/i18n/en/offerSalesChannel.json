@@ -1,0 +1,23 @@
+{
+  "crmwebApp": {
+    "offerSalesChannel": {
+      "home": {
+        "title": "Offer Sales Channels",
+        "createLabel": "Create a new Offer Sales Channel",
+        "createOrEditLabel": "Create or edit a Offer Sales Channel",
+        "notFound": "No Offer Sales Channels found"
+      },
+      "created": "A new Offer Sales Channel is created with identifier {{ param }}",
+      "updated": "A Offer Sales Channel is updated with identifier {{ param }}",
+      "deleted": "A Offer Sales Channel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Offer Sales Channel {{ id }}?"
+      },
+      "detail": {
+        "title": "Offer Sales Channel"
+      },
+      "salesChannel": "Sales Channel",
+      "offer": "Offer"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+    "name": "OfferPromotion",
+    "fields": [
+        {
+            "fieldName": "promoCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "offerId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "promoType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "offerPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "offerDiscount",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "freeDataOfferId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "RecordStatus",
+            "fieldValues": "INACTIVE,ACTIVE"
+        },
+        {
+            "fieldName": "lockCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastUpdatedDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastUpdatedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tenantId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "offerPromotions",
+            "relationshipName": "offer",
+            "otherEntityField": "offerId"
+        }
+    ],
+    "changelogDate": "20200323155300",
+    "entityTableName": "offer_promotion",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

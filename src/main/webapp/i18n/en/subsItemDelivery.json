@@ -1,0 +1,40 @@
+{
+  "crmwebApp": {
+    "subsItemDelivery": {
+      "home": {
+        "title": "Subs Item Deliveries",
+        "createLabel": "Create a new Subs Item Delivery",
+        "createOrEditLabel": "Create or edit a Subs Item Delivery",
+        "notFound": "No Subs Item Deliveries found"
+      },
+      "created": "A new Subs Item Delivery is created with identifier {{ param }}",
+      "updated": "A Subs Item Delivery is updated with identifier {{ param }}",
+      "deleted": "A Subs Item Delivery is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Subs Item Delivery {{ id }}?"
+      },
+      "detail": {
+        "title": "Subs Item Delivery"
+      },
+      "deliveryId": "Delivery Id",
+      "deliveryStatus": "Delivery Status",
+      "deliveryOption": "Delivery Option",
+      "tempEfLockerCode": "Temp Ef Locker Code",
+      "tempAddressId": "Temp Address Id",
+      "deliveryRefCode": "Delivery Ref Code",
+      "fileGenerationDate": "File Generation Date",
+      "fileReceivedDate": "File Received Date",
+      "deliveryDate": "Delivery Date",
+      "remarks": "Remarks",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id",
+      "efLockerLocation": "Ef Locker Location",
+      "custAddress": "Cust Address",
+      "subscriptionProduct": "Subscription Product"
+    }
+  }
+}

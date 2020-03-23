@@ -1,0 +1,83 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="crmwebApp.efLockerLocation.home.title">Ef Locker Locations</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-ef-locker-location" [routerLink]="['/ef-locker-location/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="crmwebApp.efLockerLocation.home.createLabel">
+            Create a new Ef Locker Location
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="efLockerLocations?.length === 0">
+        <span jhiTranslate="crmwebApp.efLockerLocation.home.notFound">No efLockerLocations found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="efLockerLocations?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="efLockerCode"><span jhiTranslate="crmwebApp.efLockerLocation.efLockerCode">Ef Locker Code</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regionEng"><span jhiTranslate="crmwebApp.efLockerLocation.regionEng">Region Eng</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="areaEng"><span jhiTranslate="crmwebApp.efLockerLocation.areaEng">Area Eng</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="fullAddressEng"><span jhiTranslate="crmwebApp.efLockerLocation.fullAddressEng">Full Address Eng</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regionChi"><span jhiTranslate="crmwebApp.efLockerLocation.regionChi">Region Chi</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="areaChi"><span jhiTranslate="crmwebApp.efLockerLocation.areaChi">Area Chi</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="fullAddressChi"><span jhiTranslate="crmwebApp.efLockerLocation.fullAddressChi">Full Address Chi</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let efLockerLocation of efLockerLocations ;trackBy: trackId">
+                    <td><a [routerLink]="['/ef-locker-location', efLockerLocation.id, 'view']">{{ efLockerLocation.id }}</a></td>
+                    <td>{{ efLockerLocation.efLockerCode }}</td>
+                    <td>{{ efLockerLocation.regionEng }}</td>
+                    <td>{{ efLockerLocation.areaEng }}</td>
+                    <td>{{ efLockerLocation.fullAddressEng }}</td>
+                    <td>{{ efLockerLocation.regionChi }}</td>
+                    <td>{{ efLockerLocation.areaChi }}</td>
+                    <td>{{ efLockerLocation.fullAddressChi }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/ef-locker-location', efLockerLocation.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/ef-locker-location', efLockerLocation.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(efLockerLocation)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="efLockerLocations?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

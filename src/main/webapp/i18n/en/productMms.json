@@ -1,0 +1,37 @@
+{
+  "crmwebApp": {
+    "productMms": {
+      "home": {
+        "title": "Product Mms",
+        "createLabel": "Create a new Product Mms",
+        "createOrEditLabel": "Create or edit a Product Mms",
+        "notFound": "No Product Mms found"
+      },
+      "created": "A new Product Mms is created with identifier {{ param }}",
+      "updated": "A Product Mms is updated with identifier {{ param }}",
+      "deleted": "A Product Mms is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Product Mms {{ id }}?"
+      },
+      "detail": {
+        "title": "Product Mms"
+      },
+      "mmsId": "Mms Id",
+      "productSpecId": "Product Spec Id",
+      "unit": "Unit",
+      "volume": "Volume",
+      "mmsType": "Mms Type",
+      "roamingAllowed": "Roaming Allowed",
+      "minTransferQuota": "Min Transfer Quota",
+      "maxTransferQuota": "Max Transfer Quota",
+      "minRetentionQuota": "Min Retention Quota",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id",
+      "product": "Product"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-ef-locker-location-heading" jhiTranslate="crmwebApp.efLockerLocation.home.createOrEditLabel">Create or edit a Ef Locker Location</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.efLockerCode" for="field_efLockerCode">Ef Locker Code</label>
+                    <input type="text" class="form-control" name="efLockerCode" id="field_efLockerCode"
+                           formControlName="efLockerCode"/>
+                    <div *ngIf="editForm.get('efLockerCode')!.invalid && (editForm.get('efLockerCode')!.dirty || editForm.get('efLockerCode')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('efLockerCode')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.regionEng" for="field_regionEng">Region Eng</label>
+                    <input type="text" class="form-control" name="regionEng" id="field_regionEng"
+                           formControlName="regionEng"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.areaEng" for="field_areaEng">Area Eng</label>
+                    <input type="text" class="form-control" name="areaEng" id="field_areaEng"
+                           formControlName="areaEng"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.fullAddressEng" for="field_fullAddressEng">Full Address Eng</label>
+                    <input type="text" class="form-control" name="fullAddressEng" id="field_fullAddressEng"
+                           formControlName="fullAddressEng"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.regionChi" for="field_regionChi">Region Chi</label>
+                    <input type="text" class="form-control" name="regionChi" id="field_regionChi"
+                           formControlName="regionChi"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.areaChi" for="field_areaChi">Area Chi</label>
+                    <input type="text" class="form-control" name="areaChi" id="field_areaChi"
+                           formControlName="areaChi"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.efLockerLocation.fullAddressChi" for="field_fullAddressChi">Full Address Chi</label>
+                    <input type="text" class="form-control" name="fullAddressChi" id="field_fullAddressChi"
+                           formControlName="fullAddressChi"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

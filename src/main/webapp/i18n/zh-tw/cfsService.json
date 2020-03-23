@@ -1,0 +1,32 @@
+{
+  "crmwebApp": {
+    "cfsService": {
+      "home": {
+        "title": "Cfs Services",
+        "createLabel": "建立一筆新的 Cfs Service",
+        "createOrEditLabel": "建立或編輯 Cfs Service",
+        "notFound": "No Cfs Services found"
+      },
+      "created": "新的 Cfs Service 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Cfs Service 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Cfs Service 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Cfs Service {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Cfs Service"
+      },
+      "serviceId": "Service Id",
+      "serviceName": "Service Name",
+      "tempVoiceSpecIds": "Temp Voice Spec Ids",
+      "tempDataSpecIds": "Temp Data Spec Ids",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id",
+      "product": "Product"
+    }
+  }
+}

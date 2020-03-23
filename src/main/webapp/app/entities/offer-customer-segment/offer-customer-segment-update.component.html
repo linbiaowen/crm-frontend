@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-offer-customer-segment-heading" jhiTranslate="crmwebApp.offerCustomerSegment.home.createOrEditLabel">Create or edit a Offer Customer Segment</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.offerCustomerSegment.customerSegment" for="field_customerSegment">Customer Segment</label>
+                    <input type="text" class="form-control" name="customerSegment" id="field_customerSegment"
+                           formControlName="customerSegment"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.offerCustomerSegment.offer" for="field_offer">Offer</label>
+                    <select class="form-control" id="field_offer" name="offer" formControlName="offer">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="offerOption.id === editForm.get('offer')!.value?.id ? editForm.get('offer')!.value : offerOption" *ngFor="let offerOption of offers; trackBy: trackById">{{ offerOption.offerId }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

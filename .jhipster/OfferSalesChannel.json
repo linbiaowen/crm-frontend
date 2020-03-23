@@ -1,0 +1,30 @@
+{
+    "name": "OfferSalesChannel",
+    "fields": [
+        {
+            "fieldName": "salesChannel",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "salesChannels",
+            "relationshipName": "offer",
+            "otherEntityField": "offerId"
+        }
+    ],
+    "changelogDate": "20200323153900",
+    "entityTableName": "offer_sales_channel",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

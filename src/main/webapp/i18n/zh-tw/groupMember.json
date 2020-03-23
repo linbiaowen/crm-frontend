@@ -1,0 +1,36 @@
+{
+  "crmwebApp": {
+    "groupMember": {
+      "home": {
+        "title": "Group Members",
+        "createLabel": "建立一筆新的 Group Member",
+        "createOrEditLabel": "建立或編輯 Group Member",
+        "notFound": "No Group Members found"
+      },
+      "created": "新的 Group Member 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Group Member 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Group Member 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Group Member {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Group Member"
+      },
+      "groupMemberId": "Group Member Id",
+      "groupId": "Group Id",
+      "msisdn": "Msisdn",
+      "groupRole": "Group Role",
+      "endReasonCode": "End Reason Code",
+      "remarks": "Remarks",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id",
+      "subscriptionGroup": "Subscription Group"
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+    "name": "Product",
+    "fields": [
+        {
+            "fieldName": "productId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "productName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "productNameChi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productDescChi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productCate",
+            "fieldType": "ProductCate",
+            "fieldValues": "TELCO,NON_TELCO"
+        },
+        {
+            "fieldName": "productNature",
+            "fieldType": "ProductNature",
+            "fieldValues": "DEVICE,SERVICE,MECHANDISE"
+        },
+        {
+            "fieldName": "productFamily",
+            "fieldType": "ProductFamily",
+            "fieldValues": "VOICE,DATA,SMS,BOX"
+        },
+        {
+            "fieldName": "productType",
+            "fieldType": "ProductType",
+            "fieldValues": "BASE,VAS,ADDON"
+        },
+        {
+            "fieldName": "modelCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempServiceId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempResourceSpecIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productSpecType",
+            "fieldType": "ProductSpecType",
+            "fieldValues": "DEVICE,ACCESSORY,SIM,VOICE,SMS,DATA,BOX"
+        },
+        {
+            "fieldName": "skuType",
+            "fieldType": "SkuType",
+            "fieldValues": "DEVICE,ACCESSORY,SIM,BOX"
+        },
+        {
+            "fieldName": "simType",
+            "fieldType": "SimType",
+            "fieldValues": "PHYSICAL_SIM,ESIM,ONE_CARD_MULTI_NUMBER"
+        },
+        {
+            "fieldName": "boxType",
+            "fieldType": "BoxType",
+            "fieldValues": "TRAVEL,BEAUTY,BOX_OF_MONTH"
+        },
+        {
+            "fieldName": "shippable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tempDeliveryOptions",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempVoiceIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempDataIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempSmsIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempMmsIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "independentlyOrderable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "networkProvisionRequired",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "changeEntitlementAllowed",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "lockCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastUpdatedDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastUpdatedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tenantId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "productVoice",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "productVoice",
+            "otherEntityField": "voiceId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "productData",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "productData",
+            "otherEntityField": "dataId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "productSms",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "productSms",
+            "otherEntityField": "smsId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "productMms",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "productMms",
+            "otherEntityField": "mmsId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "cfsService",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "cfsService",
+            "otherEntityField": "serviceId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "deliveryOption",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "deliveryOptions"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "resourceSpecification",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "resourceSpecifications"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "products",
+            "relationshipName": "offer",
+            "otherEntityField": "offerId"
+        }
+    ],
+    "changelogDate": "20200323154100",
+    "entityTableName": "product",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

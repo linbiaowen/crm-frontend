@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cfsService">
+            <h2><span jhiTranslate="crmwebApp.cfsService.detail.title">Cfs Service</span> {{ cfsService.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="crmwebApp.cfsService.serviceId">Service Id</span></dt>
+                <dd>
+                    <span>{{ cfsService.serviceId }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.serviceName">Service Name</span></dt>
+                <dd>
+                    <span>{{ cfsService.serviceName }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.tempVoiceSpecIds">Temp Voice Spec Ids</span></dt>
+                <dd>
+                    <span>{{ cfsService.tempVoiceSpecIds }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.tempDataSpecIds">Temp Data Spec Ids</span></dt>
+                <dd>
+                    <span>{{ cfsService.tempDataSpecIds }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.lockCount">Lock Count</span></dt>
+                <dd>
+                    <span>{{ cfsService.lockCount }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{ cfsService.createdDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ cfsService.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.lastUpdatedDate">Last Updated Date</span></dt>
+                <dd>
+                    <span>{{ cfsService.lastUpdatedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.lastUpdatedBy">Last Updated By</span></dt>
+                <dd>
+                    <span>{{ cfsService.lastUpdatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.tenantId">Tenant Id</span></dt>
+                <dd>
+                    <span>{{ cfsService.tenantId }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cfs-service', cfsService.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,212 @@
+{
+    "name": "SubscriptionProduct",
+    "fields": [
+        {
+            "fieldName": "subscriptionProductSeqId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "subscriptionId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "productId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "productName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deviceType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deviceModel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deviceSerialNbr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "imei",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productTheme",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activationDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "secondMsisdn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "secondImsi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "quantity",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "terminationReasonCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "offerId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "offerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "offerType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "matrixxCatalogId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "matrixxResourceId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "matrixxObjectId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salesChannel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contractId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "autoRenewal",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "autoPay",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vendorProvisionInd",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tempProvisionSeqIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deliveryIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lockCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastUpdatedDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastUpdatedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tenantId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "subscriptionProvision",
+            "otherEntityRelationshipName": "subscriptionProduct",
+            "relationshipName": "subscriptionProvisions"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "subsItemDelivery",
+            "otherEntityRelationshipName": "subscriptionProduct",
+            "relationshipName": "subsItemDeliverys"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "subsOrderDetails",
+            "otherEntityRelationshipName": "subscriptionProducts",
+            "relationshipName": "subsOrderDetail",
+            "otherEntityField": "subsOrderDetailSeqId"
+        }
+    ],
+    "changelogDate": "20200323153200",
+    "entityTableName": "subscription_product",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

@@ -1,0 +1,23 @@
+{
+  "crmwebApp": {
+    "offerCustomerSegment": {
+      "home": {
+        "title": "Offer Customer Segments",
+        "createLabel": "建立一筆新的 Offer Customer Segment",
+        "createOrEditLabel": "建立或編輯 Offer Customer Segment",
+        "notFound": "No Offer Customer Segments found"
+      },
+      "created": "新的 Offer Customer Segment 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Offer Customer Segment 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Offer Customer Segment 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Offer Customer Segment {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Offer Customer Segment"
+      },
+      "customerSegment": "Customer Segment",
+      "offer": "Offer"
+    }
+  }
+}

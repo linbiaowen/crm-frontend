@@ -1,0 +1,86 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="productMms">
+            <h2><span jhiTranslate="crmwebApp.productMms.detail.title">Product Mms</span> {{ productMms.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="crmwebApp.productMms.mmsId">Mms Id</span></dt>
+                <dd>
+                    <span>{{ productMms.mmsId }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.productSpecId">Product Spec Id</span></dt>
+                <dd>
+                    <span>{{ productMms.productSpecId }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.unit">Unit</span></dt>
+                <dd>
+                    <span>{{ productMms.unit }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.volume">Volume</span></dt>
+                <dd>
+                    <span>{{ productMms.volume }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.mmsType">Mms Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'crmwebApp.MmsType.' + productMms.mmsType }}">{{ productMms.mmsType }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.roamingAllowed">Roaming Allowed</span></dt>
+                <dd>
+                    <span>{{ productMms.roamingAllowed }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.minTransferQuota">Min Transfer Quota</span></dt>
+                <dd>
+                    <span>{{ productMms.minTransferQuota }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.maxTransferQuota">Max Transfer Quota</span></dt>
+                <dd>
+                    <span>{{ productMms.maxTransferQuota }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.minRetentionQuota">Min Retention Quota</span></dt>
+                <dd>
+                    <span>{{ productMms.minRetentionQuota }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.lockCount">Lock Count</span></dt>
+                <dd>
+                    <span>{{ productMms.lockCount }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{ productMms.createdDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ productMms.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.lastUpdatedDate">Last Updated Date</span></dt>
+                <dd>
+                    <span>{{ productMms.lastUpdatedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.lastUpdatedBy">Last Updated By</span></dt>
+                <dd>
+                    <span>{{ productMms.lastUpdatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.productMms.tenantId">Tenant Id</span></dt>
+                <dd>
+                    <span>{{ productMms.tenantId }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/product-mms', productMms.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

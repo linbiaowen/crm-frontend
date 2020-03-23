@@ -1,0 +1,172 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="offer">
+            <h2><span jhiTranslate="crmwebApp.offer.detail.title">Offer</span> {{ offer.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="crmwebApp.offer.offerId">Offer Id</span></dt>
+                <dd>
+                    <span>{{ offer.offerId }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerExternalId">Offer External Id</span></dt>
+                <dd>
+                    <span>{{ offer.offerExternalId }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerName">Offer Name</span></dt>
+                <dd>
+                    <span>{{ offer.offerName }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerNameChi">Offer Name Chi</span></dt>
+                <dd>
+                    <span>{{ offer.offerNameChi }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerType">Offer Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'crmwebApp.OfferType.' + offer.offerType }}">{{ offer.offerType }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerPrice">Offer Price</span></dt>
+                <dd>
+                    <span>{{ offer.offerPrice }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempCustomerSegments">Temp Customer Segments</span></dt>
+                <dd>
+                    <span>{{ offer.tempCustomerSegments }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempCustomerClasses">Temp Customer Classes</span></dt>
+                <dd>
+                    <span>{{ offer.tempCustomerClasses }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempSalesChannels">Temp Sales Channels</span></dt>
+                <dd>
+                    <span>{{ offer.tempSalesChannels }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{ offer.startDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.endDate">End Date</span></dt>
+                <dd>
+                    <span>{{ offer.endDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempChildOfferIds">Temp Child Offer Ids</span></dt>
+                <dd>
+                    <span>{{ offer.tempChildOfferIds }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempProductIds">Temp Product Ids</span></dt>
+                <dd>
+                    <span>{{ offer.tempProductIds }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempAdvancePaymentIds">Temp Advance Payment Ids</span></dt>
+                <dd>
+                    <span>{{ offer.tempAdvancePaymentIds }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempPromoCodes">Temp Promo Codes</span></dt>
+                <dd>
+                    <span>{{ offer.tempPromoCodes }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tempDiscountCodes">Temp Discount Codes</span></dt>
+                <dd>
+                    <span>{{ offer.tempDiscountCodes }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.limitedActivationPeriod">Limited Activation Period</span></dt>
+                <dd>
+                    <span>{{ offer.limitedActivationPeriod }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.allowedActivationStartDate">Allowed Activation Start Date</span></dt>
+                <dd>
+                    <span>{{ offer.allowedActivationStartDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.allowedActivationEndDate">Allowed Activation End Date</span></dt>
+                <dd>
+                    <span>{{ offer.allowedActivationEndDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.isGroupSharingOffer">Is Group Sharing Offer</span></dt>
+                <dd>
+                    <span>{{ offer.isGroupSharingOffer }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.isMnpOffer">Is Mnp Offer</span></dt>
+                <dd>
+                    <span>{{ offer.isMnpOffer }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.autoRenewal">Auto Renewal</span></dt>
+                <dd>
+                    <span>{{ offer.autoRenewal }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.transferAllowed">Transfer Allowed</span></dt>
+                <dd>
+                    <span>{{ offer.transferAllowed }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.infoSharingAllowed">Info Sharing Allowed</span></dt>
+                <dd>
+                    <span>{{ offer.infoSharingAllowed }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.infoSharingOptions">Info Sharing Options</span></dt>
+                <dd>
+                    <span>{{ offer.infoSharingOptions }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerPeriod">Offer Period</span></dt>
+                <dd>
+                    <span>{{ offer.offerPeriod }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.offerPeriodTerm">Offer Period Term</span></dt>
+                <dd>
+                    <span>{{ offer.offerPeriodTerm }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.paymentType">Payment Type</span></dt>
+                <dd>
+                    <span>{{ offer.paymentType }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.priority">Priority</span></dt>
+                <dd>
+                    <span>{{ offer.priority }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.lockCount">Lock Count</span></dt>
+                <dd>
+                    <span>{{ offer.lockCount }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{ offer.createdDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ offer.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.lastUpdatedDate">Last Updated Date</span></dt>
+                <dd>
+                    <span>{{ offer.lastUpdatedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.lastUpdatedBy">Last Updated By</span></dt>
+                <dd>
+                    <span>{{ offer.lastUpdatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.tenantId">Tenant Id</span></dt>
+                <dd>
+                    <span>{{ offer.tenantId }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offer.parentOffer">Parent Offer</span></dt>
+                <dd>
+                    <span *ngFor="let parentOffer of offer.parentOffers; let last = last">
+                        <a [routerLink]="['/offer', parentOffer?.id, 'view']">{{ parentOffer.offerId }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/offer', offer.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

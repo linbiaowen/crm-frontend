@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="offerSalesChannel">
+            <h2><span jhiTranslate="crmwebApp.offerSalesChannel.detail.title">Offer Sales Channel</span> {{ offerSalesChannel.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="crmwebApp.offerSalesChannel.salesChannel">Sales Channel</span></dt>
+                <dd>
+                    <span>{{ offerSalesChannel.salesChannel }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.offerSalesChannel.offer">Offer</span></dt>
+                <dd>
+                    <div *ngIf="offerSalesChannel.offer">
+                        <a [routerLink]="['/offer', offerSalesChannel.offer?.id, 'view']">{{ offerSalesChannel.offer?.offerId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/offer-sales-channel', offerSalesChannel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

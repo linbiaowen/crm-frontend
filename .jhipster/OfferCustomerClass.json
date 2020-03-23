@@ -1,0 +1,30 @@
+{
+    "name": "OfferCustomerClass",
+    "fields": [
+        {
+            "fieldName": "customerClass",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "customerClasses",
+            "relationshipName": "offer",
+            "otherEntityField": "offerId"
+        }
+    ],
+    "changelogDate": "20200323153800",
+    "entityTableName": "offer_customer_class",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

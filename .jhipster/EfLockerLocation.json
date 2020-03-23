@@ -1,0 +1,57 @@
+{
+    "name": "EfLockerLocation",
+    "fields": [
+        {
+            "fieldName": "efLockerCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "regionEng",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "areaEng",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fullAddressEng",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regionChi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "areaChi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fullAddressChi",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "subsItemDelivery",
+            "otherEntityRelationshipName": "efLockerLocation",
+            "relationshipName": "subsItemDelivery",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200323153000",
+    "entityTableName": "ef_locker_location",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

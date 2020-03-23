@@ -1,0 +1,30 @@
+{
+    "name": "OfferCustomerSegment",
+    "fields": [
+        {
+            "fieldName": "customerSegment",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "customerSegments",
+            "relationshipName": "offer",
+            "otherEntityField": "offerId"
+        }
+    ],
+    "changelogDate": "20200323153700",
+    "entityTableName": "offer_customer_segment",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipServer": true
+}

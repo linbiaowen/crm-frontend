@@ -26,6 +26,16 @@
     "nativeLanguage": "en",
     "languages": ["en", "zh-tw"],
     "blueprints": [],
-    "skipServer": true
+    "skipServer": true,
+    "appsFolders": ["crm-frontend"],
+    "directoryPath": "../",
+    "serviceDiscoveryType": false,
+    "monitoring": "no",
+    "jwtSecretKey": "ZDYwM2NiYzAyZjVlMTViMWE5M2IwY2M5ZjYzMjExNzI0ZmNiMWRkOTQyYTMyMmM2NWI2YWEwN2QzZjcxN2EzYmY3N2E1ZGQzZWMwNjlmOTFiZGQ3YTUwZDdhNmViZDI3MzU4OQ==",
+    "dockerRepositoryName": "linbiaowen",
+    "dockerPushCommand": "podman push",
+    "openshiftNamespace": "myproject",
+    "storageType": "ephemeral",
+    "registryReplicas": 2
   }
 }

@@ -1,0 +1,37 @@
+{
+  "crmwebApp": {
+    "productMms": {
+      "home": {
+        "title": "Product Mms",
+        "createLabel": "建立一筆新的 Product Mms",
+        "createOrEditLabel": "建立或編輯 Product Mms",
+        "notFound": "No Product Mms found"
+      },
+      "created": "新的 Product Mms 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Product Mms 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Product Mms 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Product Mms {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Product Mms"
+      },
+      "mmsId": "Mms Id",
+      "productSpecId": "Product Spec Id",
+      "unit": "Unit",
+      "volume": "Volume",
+      "mmsType": "Mms Type",
+      "roamingAllowed": "Roaming Allowed",
+      "minTransferQuota": "Min Transfer Quota",
+      "maxTransferQuota": "Max Transfer Quota",
+      "minRetentionQuota": "Min Retention Quota",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id",
+      "product": "Product"
+    }
+  }
+}

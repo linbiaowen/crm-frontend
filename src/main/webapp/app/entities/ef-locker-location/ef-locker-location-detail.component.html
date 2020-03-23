@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="efLockerLocation">
+            <h2><span jhiTranslate="crmwebApp.efLockerLocation.detail.title">Ef Locker Location</span> {{ efLockerLocation.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.efLockerCode">Ef Locker Code</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.efLockerCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.regionEng">Region Eng</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.regionEng }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.areaEng">Area Eng</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.areaEng }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.fullAddressEng">Full Address Eng</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.fullAddressEng }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.regionChi">Region Chi</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.regionChi }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.areaChi">Area Chi</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.areaChi }}</span>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.efLockerLocation.fullAddressChi">Full Address Chi</span></dt>
+                <dd>
+                    <span>{{ efLockerLocation.fullAddressChi }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ef-locker-location', efLockerLocation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "crmwebApp": {
+    "offerCustomerSegment": {
+      "home": {
+        "title": "Offer Customer Segments",
+        "createLabel": "Create a new Offer Customer Segment",
+        "createOrEditLabel": "Create or edit a Offer Customer Segment",
+        "notFound": "No Offer Customer Segments found"
+      },
+      "created": "A new Offer Customer Segment is created with identifier {{ param }}",
+      "updated": "A Offer Customer Segment is updated with identifier {{ param }}",
+      "deleted": "A Offer Customer Segment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Offer Customer Segment {{ id }}?"
+      },
+      "detail": {
+        "title": "Offer Customer Segment"
+      },
+      "customerSegment": "Customer Segment",
+      "offer": "Offer"
+    }
+  }
+}

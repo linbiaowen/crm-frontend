@@ -1,0 +1,10 @@
+{
+  "crmwebApp": {
+    "ProductType": {
+      "null": "",
+      "BASE": "BASE",
+      "VAS": "VAS",
+      "ADDON": "ADDON"
+    }
+  }
+}

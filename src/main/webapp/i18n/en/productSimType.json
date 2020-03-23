@@ -1,0 +1,31 @@
+{
+  "crmwebApp": {
+    "productSimType": {
+      "home": {
+        "title": "Product Sim Types",
+        "createLabel": "Create a new Product Sim Type",
+        "createOrEditLabel": "Create or edit a Product Sim Type",
+        "notFound": "No Product Sim Types found"
+      },
+      "created": "A new Product Sim Type is created with identifier {{ param }}",
+      "updated": "A Product Sim Type is updated with identifier {{ param }}",
+      "deleted": "A Product Sim Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Product Sim Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Product Sim Type"
+      },
+      "simType": "Sim Type",
+      "imsiRangeFrom": "Imsi Range From",
+      "imsiRangeTo": "Imsi Range To",
+      "simRepositoryRef": "Sim Repository Ref",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id"
+    }
+  }
+}

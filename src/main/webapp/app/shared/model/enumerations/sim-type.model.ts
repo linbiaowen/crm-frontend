@@ -1,0 +1,5 @@
+export const enum SimType {
+  PHYSICAL_SIM = 'PHYSICAL_SIM',
+  ESIM = 'ESIM',
+  ONE_CARD_MULTI_NUMBER = 'ONE_CARD_MULTI_NUMBER'
+}
