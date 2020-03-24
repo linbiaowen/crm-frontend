@@ -51,6 +51,7 @@ export class ProductUpdatePage {
   tempDataIdsInput = element(by.id('field_tempDataIds'));
   tempSmsIdsInput = element(by.id('field_tempSmsIds'));
   tempMmsIdsInput = element(by.id('field_tempMmsIds'));
+  tempImageIdsInput = element(by.id('field_tempImageIds'));
   startDateInput = element(by.id('field_startDate'));
   endDateInput = element(by.id('field_endDate'));
   independentlyOrderableInput = element(by.id('field_independentlyOrderable'));
@@ -300,6 +301,14 @@ export class ProductUpdatePage {
 
   async getTempMmsIdsInput(): Promise<string> {
     return await this.tempMmsIdsInput.getAttribute('value');
+  }
+
+  async setTempImageIdsInput(tempImageIds: string): Promise<void> {
+    await this.tempImageIdsInput.sendKeys(tempImageIds);
+  }
+
+  async getTempImageIdsInput(): Promise<string> {
+    return await this.tempImageIdsInput.getAttribute('value');
   }
 
   async setStartDateInput(startDate: string): Promise<void> {

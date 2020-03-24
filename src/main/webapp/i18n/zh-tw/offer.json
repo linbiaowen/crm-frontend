@@ -20,6 +20,8 @@
       "offerExternalId": "Offer External Id",
       "offerName": "Offer Name",
       "offerNameChi": "Offer Name Chi",
+      "offerDesc": "Offer Desc",
+      "offerDescChi": "Offer Desc Chi",
       "offerType": "Offer Type",
       "offerPrice": "Offer Price",
       "tempCustomerSegments": "Temp Customer Segments",
@@ -32,6 +34,7 @@
       "tempAdvancePaymentIds": "Temp Advance Payment Ids",
       "tempPromoCodes": "Temp Promo Codes",
       "tempDiscountCodes": "Temp Discount Codes",
+      "tempImageIds": "Temp Image Ids",
       "limitedActivationPeriod": "Limited Activation Period",
       "allowedActivationStartDate": "Allowed Activation Start Date",
       "allowedActivationEndDate": "Allowed Activation End Date",
@@ -58,6 +61,7 @@
       "offerAdvancePayment": "Offer Advance Payment",
       "offerPromotions": "Offer Promotions",
       "offerDiscounts": "Offer Discounts",
+      "images": "Images",
       "parentOffer": "Parent Offer",
       "childOffer": "Child Offer"
     }

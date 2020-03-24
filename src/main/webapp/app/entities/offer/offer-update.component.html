@@ -48,6 +48,18 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.offer.offerDesc" for="field_offerDesc">Offer Desc</label>
+                    <input type="text" class="form-control" name="offerDesc" id="field_offerDesc"
+                           formControlName="offerDesc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.offer.offerDescChi" for="field_offerDescChi">Offer Desc Chi</label>
+                    <input type="text" class="form-control" name="offerDescChi" id="field_offerDescChi"
+                           formControlName="offerDescChi"/>
+                </div>
+
+                <div class="form-group">
                     <label class="form-control-label" jhiTranslate="crmwebApp.offer.offerType" for="field_offerType">Offer Type</label>
                     <select class="form-control" name="offerType" formControlName="offerType" id="field_offerType">
                         <option value="BASE">{{ 'crmwebApp.OfferType.BASE' | translate }}</option>
@@ -123,6 +135,12 @@
                     <label class="form-control-label" jhiTranslate="crmwebApp.offer.tempDiscountCodes" for="field_tempDiscountCodes">Temp Discount Codes</label>
                     <input type="text" class="form-control" name="tempDiscountCodes" id="field_tempDiscountCodes"
                            formControlName="tempDiscountCodes"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.offer.tempImageIds" for="field_tempImageIds">Temp Image Ids</label>
+                    <input type="text" class="form-control" name="tempImageIds" id="field_tempImageIds"
+                           formControlName="tempImageIds"/>
                 </div>
 
                 <div class="form-group">

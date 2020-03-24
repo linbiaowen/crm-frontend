@@ -6,6 +6,7 @@ import { IProductMms } from 'app/shared/model/product-mms.model';
 import { ICfsService } from 'app/shared/model/cfs-service.model';
 import { IDeliveryOption } from 'app/shared/model/delivery-option.model';
 import { IResourceSpecification } from 'app/shared/model/resource-specification.model';
+import { IImage } from 'app/shared/model/image.model';
 import { IOffer } from 'app/shared/model/offer.model';
 import { ProductCate } from 'app/shared/model/enumerations/product-cate.model';
 import { ProductNature } from 'app/shared/model/enumerations/product-nature.model';
@@ -40,6 +41,7 @@ export interface IProduct {
   tempDataIds?: string;
   tempSmsIds?: string;
   tempMmsIds?: string;
+  tempImageIds?: string;
   startDate?: Moment;
   endDate?: Moment;
   independentlyOrderable?: boolean;
@@ -58,6 +60,7 @@ export interface IProduct {
   cfsService?: ICfsService;
   deliveryOptions?: IDeliveryOption[];
   resourceSpecifications?: IResourceSpecification[];
+  images?: IImage[];
   offer?: IOffer;
 }
 
@@ -86,6 +89,7 @@ export class Product implements IProduct {
     public tempDataIds?: string,
     public tempSmsIds?: string,
     public tempMmsIds?: string,
+    public tempImageIds?: string,
     public startDate?: Moment,
     public endDate?: Moment,
     public independentlyOrderable?: boolean,
@@ -104,6 +108,7 @@ export class Product implements IProduct {
     public cfsService?: ICfsService,
     public deliveryOptions?: IDeliveryOption[],
     public resourceSpecifications?: IResourceSpecification[],
+    public images?: IImage[],
     public offer?: IOffer
   ) {
     this.shippable = this.shippable || false;

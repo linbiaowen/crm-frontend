@@ -1,0 +1,9 @@
+{
+  "crmwebApp": {
+    "ImageType": {
+      "null": "",
+      "APP": "APP",
+      "WEB": "WEB"
+    }
+  }
+}

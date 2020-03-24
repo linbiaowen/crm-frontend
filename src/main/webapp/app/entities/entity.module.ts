@@ -216,6 +216,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'model',
         loadChildren: () => import('./model/model.module').then(m => m.CrmwebModelModule)
+      },
+      {
+        path: 'image',
+        loadChildren: () => import('./image/image.module').then(m => m.CrmwebImageModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

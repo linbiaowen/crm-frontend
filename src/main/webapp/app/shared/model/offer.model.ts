@@ -6,6 +6,7 @@ import { IProduct } from 'app/shared/model/product.model';
 import { IOfferAdvancePayment } from 'app/shared/model/offer-advance-payment.model';
 import { IOfferPromotion } from 'app/shared/model/offer-promotion.model';
 import { IOfferDiscount } from 'app/shared/model/offer-discount.model';
+import { IImage } from 'app/shared/model/image.model';
 import { OfferType } from 'app/shared/model/enumerations/offer-type.model';
 
 export interface IOffer {
@@ -14,6 +15,8 @@ export interface IOffer {
   offerExternalId?: string;
   offerName?: string;
   offerNameChi?: string;
+  offerDesc?: string;
+  offerDescChi?: string;
   offerType?: OfferType;
   offerPrice?: number;
   tempCustomerSegments?: string;
@@ -26,6 +29,7 @@ export interface IOffer {
   tempAdvancePaymentIds?: string;
   tempPromoCodes?: string;
   tempDiscountCodes?: string;
+  tempImageIds?: string;
   limitedActivationPeriod?: boolean;
   allowedActivationStartDate?: Moment;
   allowedActivationEndDate?: Moment;
@@ -52,6 +56,7 @@ export interface IOffer {
   offerAdvancePayments?: IOfferAdvancePayment[];
   offerPromotions?: IOfferPromotion[];
   offerDiscounts?: IOfferDiscount[];
+  images?: IImage[];
   parentOffers?: IOffer[];
   childOffers?: IOffer[];
 }
@@ -63,6 +68,8 @@ export class Offer implements IOffer {
     public offerExternalId?: string,
     public offerName?: string,
     public offerNameChi?: string,
+    public offerDesc?: string,
+    public offerDescChi?: string,
     public offerType?: OfferType,
     public offerPrice?: number,
     public tempCustomerSegments?: string,
@@ -75,6 +82,7 @@ export class Offer implements IOffer {
     public tempAdvancePaymentIds?: string,
     public tempPromoCodes?: string,
     public tempDiscountCodes?: string,
+    public tempImageIds?: string,
     public limitedActivationPeriod?: boolean,
     public allowedActivationStartDate?: Moment,
     public allowedActivationEndDate?: Moment,
@@ -101,6 +109,7 @@ export class Offer implements IOffer {
     public offerAdvancePayments?: IOfferAdvancePayment[],
     public offerPromotions?: IOfferPromotion[],
     public offerDiscounts?: IOfferDiscount[],
+    public images?: IImage[],
     public parentOffers?: IOffer[],
     public childOffers?: IOffer[]
   ) {

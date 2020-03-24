@@ -1,0 +1,33 @@
+{
+  "crmwebApp": {
+    "image": {
+      "home": {
+        "title": "Images",
+        "createLabel": "建立一筆新的 Image",
+        "createOrEditLabel": "建立或編輯 Image",
+        "notFound": "No Images found"
+      },
+      "created": "新的 Image 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Image 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Image 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Image {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Image"
+      },
+      "imageId": "Image Id",
+      "imageType": "Image Type",
+      "image": "Image",
+      "remark": "Remark",
+      "lockCount": "Lock Count",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastUpdatedDate": "Last Updated Date",
+      "lastUpdatedBy": "Last Updated By",
+      "tenantId": "Tenant Id",
+      "offer": "Offer",
+      "product": "Product"
+    }
+  }
+}

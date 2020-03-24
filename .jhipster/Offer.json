@@ -24,6 +24,14 @@
             "fieldType": "String"
         },
         {
+            "fieldName": "offerDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "offerDescChi",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "offerType",
             "fieldType": "OfferType",
             "fieldValues": "BASE,ADDON,VAS,BUNDLE"
@@ -70,6 +78,10 @@
         },
         {
             "fieldName": "tempDiscountCodes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempImageIds",
             "fieldType": "String"
         },
         {
@@ -206,6 +218,12 @@
             "otherEntityName": "offerDiscount",
             "otherEntityRelationshipName": "offer",
             "relationshipName": "offerDiscounts"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "image",
+            "otherEntityRelationshipName": "offer",
+            "relationshipName": "images"
         },
         {
             "relationshipType": "many-to-many",

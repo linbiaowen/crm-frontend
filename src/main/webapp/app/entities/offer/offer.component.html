@@ -27,6 +27,8 @@
                     <th scope="col"  jhiSortBy="offerExternalId"><span jhiTranslate="crmwebApp.offer.offerExternalId">Offer External Id</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="offerName"><span jhiTranslate="crmwebApp.offer.offerName">Offer Name</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="offerNameChi"><span jhiTranslate="crmwebApp.offer.offerNameChi">Offer Name Chi</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="offerDesc"><span jhiTranslate="crmwebApp.offer.offerDesc">Offer Desc</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="offerDescChi"><span jhiTranslate="crmwebApp.offer.offerDescChi">Offer Desc Chi</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="offerType"><span jhiTranslate="crmwebApp.offer.offerType">Offer Type</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="offerPrice"><span jhiTranslate="crmwebApp.offer.offerPrice">Offer Price</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="tempCustomerSegments"><span jhiTranslate="crmwebApp.offer.tempCustomerSegments">Temp Customer Segments</span> <fa-icon icon="sort"></fa-icon></th>
@@ -39,6 +41,7 @@
                     <th scope="col"  jhiSortBy="tempAdvancePaymentIds"><span jhiTranslate="crmwebApp.offer.tempAdvancePaymentIds">Temp Advance Payment Ids</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="tempPromoCodes"><span jhiTranslate="crmwebApp.offer.tempPromoCodes">Temp Promo Codes</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="tempDiscountCodes"><span jhiTranslate="crmwebApp.offer.tempDiscountCodes">Temp Discount Codes</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tempImageIds"><span jhiTranslate="crmwebApp.offer.tempImageIds">Temp Image Ids</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="limitedActivationPeriod"><span jhiTranslate="crmwebApp.offer.limitedActivationPeriod">Limited Activation Period</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="allowedActivationStartDate"><span jhiTranslate="crmwebApp.offer.allowedActivationStartDate">Allowed Activation Start Date</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="allowedActivationEndDate"><span jhiTranslate="crmwebApp.offer.allowedActivationEndDate">Allowed Activation End Date</span> <fa-icon icon="sort"></fa-icon></th>
@@ -68,6 +71,8 @@
                     <td>{{ offer.offerExternalId }}</td>
                     <td>{{ offer.offerName }}</td>
                     <td>{{ offer.offerNameChi }}</td>
+                    <td>{{ offer.offerDesc }}</td>
+                    <td>{{ offer.offerDescChi }}</td>
                     <td jhiTranslate="{{ 'crmwebApp.OfferType.' + offer.offerType }}">{{ offer.offerType }}</td>
                     <td>{{ offer.offerPrice }}</td>
                     <td>{{ offer.tempCustomerSegments }}</td>
@@ -80,6 +85,7 @@
                     <td>{{ offer.tempAdvancePaymentIds }}</td>
                     <td>{{ offer.tempPromoCodes }}</td>
                     <td>{{ offer.tempDiscountCodes }}</td>
+                    <td>{{ offer.tempImageIds }}</td>
                     <td>{{ offer.limitedActivationPeriod }}</td>
                     <td>{{ offer.allowedActivationStartDate | date:'medium' }}</td>
                     <td>{{ offer.allowedActivationEndDate | date:'medium' }}</td>

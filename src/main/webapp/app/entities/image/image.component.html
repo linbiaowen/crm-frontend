@@ -1,0 +1,106 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="crmwebApp.image.home.title">Images</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-image" [routerLink]="['/image/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="crmwebApp.image.home.createLabel">
+            Create a new Image
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="images?.length === 0">
+        <span jhiTranslate="crmwebApp.image.home.notFound">No images found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="images?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="imageId"><span jhiTranslate="crmwebApp.image.imageId">Image Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="imageType"><span jhiTranslate="crmwebApp.image.imageType">Image Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="image"><span jhiTranslate="crmwebApp.image.image">Image</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="remark"><span jhiTranslate="crmwebApp.image.remark">Remark</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="lockCount"><span jhiTranslate="crmwebApp.image.lockCount">Lock Count</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="createdDate"><span jhiTranslate="crmwebApp.image.createdDate">Created Date</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="createdBy"><span jhiTranslate="crmwebApp.image.createdBy">Created By</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="lastUpdatedDate"><span jhiTranslate="crmwebApp.image.lastUpdatedDate">Last Updated Date</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="lastUpdatedBy"><span jhiTranslate="crmwebApp.image.lastUpdatedBy">Last Updated By</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tenantId"><span jhiTranslate="crmwebApp.image.tenantId">Tenant Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="offer.offerId"><span jhiTranslate="crmwebApp.image.offer">Offer</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="product.productId"><span jhiTranslate="crmwebApp.image.product">Product</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let image of images ;trackBy: trackId">
+                    <td><a [routerLink]="['/image', image.id, 'view']">{{ image.id }}</a></td>
+                    <td>{{ image.imageId }}</td>
+                    <td jhiTranslate="{{ 'crmwebApp.ImageType.' + image.imageType }}">{{ image.imageType }}</td>
+                    <td>
+                        <a *ngIf="image.image" (click)="openFile(image.imageContentType, image.image)">
+                            <img [src]="'data:' + image.imageContentType + ';base64,' + image.image" style="max-height: 30px;" alt="image image"/>
+                        </a>
+                        <span *ngIf="image.image">{{ image.imageContentType }}, {{ byteSize(image.image) }}</span>
+                    </td>
+                    <td>{{ image.remark }}</td>
+                    <td>{{ image.lockCount }}</td>
+                    <td>{{ image.createdDate | date:'medium' }}</td>
+                    <td>{{ image.createdBy }}</td>
+                    <td>{{ image.lastUpdatedDate | date:'medium' }}</td>
+                    <td>{{ image.lastUpdatedBy }}</td>
+                    <td>{{ image.tenantId }}</td>
+                    <td>
+                        <div *ngIf="image.offer">
+                            <a [routerLink]="['/offer', image.offer?.id, 'view']" >{{ image.offer?.offerId }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="image.product">
+                            <a [routerLink]="['/product', image.product?.id, 'view']" >{{ image.product?.productId }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/image', image.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/image', image.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(image)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="images?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

@@ -33,6 +33,8 @@ export class OfferUpdatePage {
   offerExternalIdInput = element(by.id('field_offerExternalId'));
   offerNameInput = element(by.id('field_offerName'));
   offerNameChiInput = element(by.id('field_offerNameChi'));
+  offerDescInput = element(by.id('field_offerDesc'));
+  offerDescChiInput = element(by.id('field_offerDescChi'));
   offerTypeSelect = element(by.id('field_offerType'));
   offerPriceInput = element(by.id('field_offerPrice'));
   tempCustomerSegmentsInput = element(by.id('field_tempCustomerSegments'));
@@ -45,6 +47,7 @@ export class OfferUpdatePage {
   tempAdvancePaymentIdsInput = element(by.id('field_tempAdvancePaymentIds'));
   tempPromoCodesInput = element(by.id('field_tempPromoCodes'));
   tempDiscountCodesInput = element(by.id('field_tempDiscountCodes'));
+  tempImageIdsInput = element(by.id('field_tempImageIds'));
   limitedActivationPeriodInput = element(by.id('field_limitedActivationPeriod'));
   allowedActivationStartDateInput = element(by.id('field_allowedActivationStartDate'));
   allowedActivationEndDateInput = element(by.id('field_allowedActivationEndDate'));
@@ -101,6 +104,22 @@ export class OfferUpdatePage {
 
   async getOfferNameChiInput(): Promise<string> {
     return await this.offerNameChiInput.getAttribute('value');
+  }
+
+  async setOfferDescInput(offerDesc: string): Promise<void> {
+    await this.offerDescInput.sendKeys(offerDesc);
+  }
+
+  async getOfferDescInput(): Promise<string> {
+    return await this.offerDescInput.getAttribute('value');
+  }
+
+  async setOfferDescChiInput(offerDescChi: string): Promise<void> {
+    await this.offerDescChiInput.sendKeys(offerDescChi);
+  }
+
+  async getOfferDescChiInput(): Promise<string> {
+    return await this.offerDescChiInput.getAttribute('value');
   }
 
   async setOfferTypeSelect(offerType: string): Promise<void> {
@@ -204,6 +223,14 @@ export class OfferUpdatePage {
 
   async getTempDiscountCodesInput(): Promise<string> {
     return await this.tempDiscountCodesInput.getAttribute('value');
+  }
+
+  async setTempImageIdsInput(tempImageIds: string): Promise<void> {
+    await this.tempImageIdsInput.sendKeys(tempImageIds);
+  }
+
+  async getTempImageIdsInput(): Promise<string> {
+    return await this.tempImageIdsInput.getAttribute('value');
   }
 
   getLimitedActivationPeriodInput(): ElementFinder {

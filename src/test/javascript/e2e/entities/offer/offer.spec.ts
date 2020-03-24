@@ -45,6 +45,8 @@ describe('Offer e2e test', () => {
       offerUpdatePage.setOfferExternalIdInput('offerExternalId'),
       offerUpdatePage.setOfferNameInput('offerName'),
       offerUpdatePage.setOfferNameChiInput('offerNameChi'),
+      offerUpdatePage.setOfferDescInput('offerDesc'),
+      offerUpdatePage.setOfferDescChiInput('offerDescChi'),
       offerUpdatePage.offerTypeSelectLastOption(),
       offerUpdatePage.setOfferPriceInput('5'),
       offerUpdatePage.setTempCustomerSegmentsInput('tempCustomerSegments'),
@@ -57,6 +59,7 @@ describe('Offer e2e test', () => {
       offerUpdatePage.setTempAdvancePaymentIdsInput('tempAdvancePaymentIds'),
       offerUpdatePage.setTempPromoCodesInput('tempPromoCodes'),
       offerUpdatePage.setTempDiscountCodesInput('tempDiscountCodes'),
+      offerUpdatePage.setTempImageIdsInput('tempImageIds'),
       offerUpdatePage.setAllowedActivationStartDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       offerUpdatePage.setAllowedActivationEndDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       offerUpdatePage.setInfoSharingOptionsInput('infoSharingOptions'),
@@ -80,6 +83,8 @@ describe('Offer e2e test', () => {
     );
     expect(await offerUpdatePage.getOfferNameInput()).to.eq('offerName', 'Expected OfferName value to be equals to offerName');
     expect(await offerUpdatePage.getOfferNameChiInput()).to.eq('offerNameChi', 'Expected OfferNameChi value to be equals to offerNameChi');
+    expect(await offerUpdatePage.getOfferDescInput()).to.eq('offerDesc', 'Expected OfferDesc value to be equals to offerDesc');
+    expect(await offerUpdatePage.getOfferDescChiInput()).to.eq('offerDescChi', 'Expected OfferDescChi value to be equals to offerDescChi');
     expect(await offerUpdatePage.getOfferPriceInput()).to.eq('5', 'Expected offerPrice value to be equals to 5');
     expect(await offerUpdatePage.getTempCustomerSegmentsInput()).to.eq(
       'tempCustomerSegments',
@@ -115,6 +120,7 @@ describe('Offer e2e test', () => {
       'tempDiscountCodes',
       'Expected TempDiscountCodes value to be equals to tempDiscountCodes'
     );
+    expect(await offerUpdatePage.getTempImageIdsInput()).to.eq('tempImageIds', 'Expected TempImageIds value to be equals to tempImageIds');
     const selectedLimitedActivationPeriod = offerUpdatePage.getLimitedActivationPeriodInput();
     if (await selectedLimitedActivationPeriod.isSelected()) {
       await offerUpdatePage.getLimitedActivationPeriodInput().click();

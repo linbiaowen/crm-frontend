@@ -62,6 +62,7 @@ describe('Product e2e test', () => {
       productUpdatePage.setTempDataIdsInput('tempDataIds'),
       productUpdatePage.setTempSmsIdsInput('tempSmsIds'),
       productUpdatePage.setTempMmsIdsInput('tempMmsIds'),
+      productUpdatePage.setTempImageIdsInput('tempImageIds'),
       productUpdatePage.setStartDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       productUpdatePage.setEndDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       productUpdatePage.setLockCountInput('5'),
@@ -117,6 +118,10 @@ describe('Product e2e test', () => {
     expect(await productUpdatePage.getTempDataIdsInput()).to.eq('tempDataIds', 'Expected TempDataIds value to be equals to tempDataIds');
     expect(await productUpdatePage.getTempSmsIdsInput()).to.eq('tempSmsIds', 'Expected TempSmsIds value to be equals to tempSmsIds');
     expect(await productUpdatePage.getTempMmsIdsInput()).to.eq('tempMmsIds', 'Expected TempMmsIds value to be equals to tempMmsIds');
+    expect(await productUpdatePage.getTempImageIdsInput()).to.eq(
+      'tempImageIds',
+      'Expected TempImageIds value to be equals to tempImageIds'
+    );
     expect(await productUpdatePage.getStartDateInput()).to.contain(
       '2001-01-01T02:30',
       'Expected startDate value to be equals to 2000-12-31'

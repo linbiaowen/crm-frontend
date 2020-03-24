@@ -1,0 +1,166 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-image-heading" jhiTranslate="crmwebApp.image.home.createOrEditLabel">Create or edit a Image</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.imageId" for="field_imageId">Image Id</label>
+                    <input type="number" class="form-control" name="imageId" id="field_imageId"
+                           formControlName="imageId"/>
+                    <div *ngIf="editForm.get('imageId')!.invalid && (editForm.get('imageId')!.dirty || editForm.get('imageId')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('imageId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('imageId')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.imageType" for="field_imageType">Image Type</label>
+                    <select class="form-control" name="imageType" formControlName="imageType" id="field_imageType">
+                        <option value="APP">{{ 'crmwebApp.ImageType.APP' | translate }}</option>
+                        <option value="WEB">{{ 'crmwebApp.ImageType.WEB' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.image" for="field_image">Image</label>
+                    <div>
+                        <img [src]="'data:' + editForm.get('imageContentType')!.value + ';base64,' + editForm.get('image')!.value" style="max-height: 100px;" *ngIf="editForm.get('image')!.value" alt="image image"/>
+                        <div *ngIf="editForm.get('image')!.value" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{ editForm.get('imageContentType')!.value }}, {{ byteSize(editForm.get('image')!.value) }}</span>
+                            <button type="button" (click)="clearInputImage('image', 'imageContentType', 'file_image')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon icon="times"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_image" (change)="setFileData($event, 'image', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="image" id="field_image"
+                           formControlName="image"/>
+                    <input type="hidden" class="form-control" name="imageContentType" id="field_imageContentType"
+                           formControlName="imageContentType" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.remark" for="field_remark">Remark</label>
+                    <input type="text" class="form-control" name="remark" id="field_remark"
+                           formControlName="remark"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.lockCount" for="field_lockCount">Lock Count</label>
+                    <input type="number" class="form-control" name="lockCount" id="field_lockCount"
+                           formControlName="lockCount"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.createdDate" for="field_createdDate">Created Date</label>
+                    <div class="d-flex">
+                        <input id="field_createdDate" type="datetime-local" class="form-control" name="createdDate" formControlName="createdDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                    <div *ngIf="editForm.get('createdDate')!.invalid && (editForm.get('createdDate')!.dirty || editForm.get('createdDate')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('createdDate')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('createdDate')?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.createdBy" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                    <div *ngIf="editForm.get('createdBy')!.invalid && (editForm.get('createdBy')!.dirty || editForm.get('createdBy')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('createdBy')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.lastUpdatedDate" for="field_lastUpdatedDate">Last Updated Date</label>
+                    <div class="d-flex">
+                        <input id="field_lastUpdatedDate" type="datetime-local" class="form-control" name="lastUpdatedDate" formControlName="lastUpdatedDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                    <div *ngIf="editForm.get('lastUpdatedDate')!.invalid && (editForm.get('lastUpdatedDate')!.dirty || editForm.get('lastUpdatedDate')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('lastUpdatedDate')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('lastUpdatedDate')?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.lastUpdatedBy" for="field_lastUpdatedBy">Last Updated By</label>
+                    <input type="text" class="form-control" name="lastUpdatedBy" id="field_lastUpdatedBy"
+                           formControlName="lastUpdatedBy"/>
+                    <div *ngIf="editForm.get('lastUpdatedBy')!.invalid && (editForm.get('lastUpdatedBy')!.dirty || editForm.get('lastUpdatedBy')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('lastUpdatedBy')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.tenantId" for="field_tenantId">Tenant Id</label>
+                    <input type="text" class="form-control" name="tenantId" id="field_tenantId"
+                           formControlName="tenantId"/>
+                    <div *ngIf="editForm.get('tenantId')!.invalid && (editForm.get('tenantId')!.dirty || editForm.get('tenantId')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('tenantId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.offer" for="field_offer">Offer</label>
+                    <select class="form-control" id="field_offer" name="offer" formControlName="offer">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="offerOption.id === editForm.get('offer')!.value?.id ? editForm.get('offer')!.value : offerOption" *ngFor="let offerOption of offers; trackBy: trackById">{{ offerOption.offerId }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.product" for="field_product">Product</label>
+                    <select class="form-control" id="field_product" name="product" formControlName="product">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="productOption.id === editForm.get('product')!.value?.id ? editForm.get('product')!.value : productOption" *ngFor="let productOption of products; trackBy: trackById">{{ productOption.productId }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

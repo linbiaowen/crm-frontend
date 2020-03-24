@@ -38,6 +38,7 @@
       "tempDataIds": "Temp Data Ids",
       "tempSmsIds": "Temp Sms Ids",
       "tempMmsIds": "Temp Mms Ids",
+      "tempImageIds": "Temp Image Ids",
       "startDate": "Start Date",
       "endDate": "End Date",
       "independentlyOrderable": "Independently Orderable",
@@ -56,6 +57,7 @@
       "cfsService": "Cfs Service",
       "deliveryOptions": "Delivery Options",
       "resourceSpecifications": "Resource Specifications",
+      "images": "Images",
       "offer": "Offer"
     }
   }
