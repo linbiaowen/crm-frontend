@@ -58,7 +58,7 @@ export class SubscriptionProductUpdatePage {
   remarksInput = element(by.id('field_remarks'));
   vendorProvisionIndInput = element(by.id('field_vendorProvisionInd'));
   tempProvisionSeqIdsInput = element(by.id('field_tempProvisionSeqIds'));
-  deliveryIdsInput = element(by.id('field_deliveryIds'));
+  tempDeliveryIdsInput = element(by.id('field_tempDeliveryIds'));
   lockCountInput = element(by.id('field_lockCount'));
   createdDateInput = element(by.id('field_createdDate'));
   createdByInput = element(by.id('field_createdBy'));
@@ -292,12 +292,12 @@ export class SubscriptionProductUpdatePage {
     return await this.tempProvisionSeqIdsInput.getAttribute('value');
   }
 
-  async setDeliveryIdsInput(deliveryIds: string): Promise<void> {
-    await this.deliveryIdsInput.sendKeys(deliveryIds);
+  async setTempDeliveryIdsInput(tempDeliveryIds: string): Promise<void> {
+    await this.tempDeliveryIdsInput.sendKeys(tempDeliveryIds);
   }
 
-  async getDeliveryIdsInput(): Promise<string> {
-    return await this.deliveryIdsInput.getAttribute('value');
+  async getTempDeliveryIdsInput(): Promise<string> {
+    return await this.tempDeliveryIdsInput.getAttribute('value');
   }
 
   async setLockCountInput(lockCount: string): Promise<void> {

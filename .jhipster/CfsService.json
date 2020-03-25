@@ -66,6 +66,22 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
+            "otherEntityName": "voiceServiceSpec",
+            "otherEntityRelationshipName": "cfsService",
+            "relationshipName": "voiceServiceSpec",
+            "otherEntityField": "voiceSpecId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "dataServiceSpec",
+            "otherEntityRelationshipName": "cfsService",
+            "relationshipName": "dataServiceSpec",
+            "otherEntityField": "dataSpecId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
             "otherEntityName": "product",
             "otherEntityRelationshipName": "cfsService",
             "relationshipName": "product",

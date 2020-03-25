@@ -50,7 +50,9 @@ describe('CfsService e2e test', () => {
       cfsServiceUpdatePage.setCreatedByInput('createdBy'),
       cfsServiceUpdatePage.setLastUpdatedDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       cfsServiceUpdatePage.setLastUpdatedByInput('lastUpdatedBy'),
-      cfsServiceUpdatePage.setTenantIdInput('tenantId')
+      cfsServiceUpdatePage.setTenantIdInput('tenantId'),
+      cfsServiceUpdatePage.voiceServiceSpecSelectLastOption(),
+      cfsServiceUpdatePage.dataServiceSpecSelectLastOption()
     ]);
 
     expect(await cfsServiceUpdatePage.getServiceIdInput()).to.eq('serviceId', 'Expected ServiceId value to be equals to serviceId');

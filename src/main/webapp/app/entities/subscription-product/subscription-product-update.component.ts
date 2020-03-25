@@ -51,7 +51,7 @@ export class SubscriptionProductUpdateComponent implements OnInit {
     remarks: [],
     vendorProvisionInd: [],
     tempProvisionSeqIds: [],
-    deliveryIds: [],
+    tempDeliveryIds: [],
     lockCount: [],
     createdDate: [null, [Validators.required]],
     createdBy: [null, [Validators.required]],
@@ -116,7 +116,7 @@ export class SubscriptionProductUpdateComponent implements OnInit {
       remarks: subscriptionProduct.remarks,
       vendorProvisionInd: subscriptionProduct.vendorProvisionInd,
       tempProvisionSeqIds: subscriptionProduct.tempProvisionSeqIds,
-      deliveryIds: subscriptionProduct.deliveryIds,
+      tempDeliveryIds: subscriptionProduct.tempDeliveryIds,
       lockCount: subscriptionProduct.lockCount,
       createdDate: subscriptionProduct.createdDate ? subscriptionProduct.createdDate.format(DATE_TIME_FORMAT) : null,
       createdBy: subscriptionProduct.createdBy,
@@ -176,7 +176,7 @@ export class SubscriptionProductUpdateComponent implements OnInit {
       remarks: this.editForm.get(['remarks'])!.value,
       vendorProvisionInd: this.editForm.get(['vendorProvisionInd'])!.value,
       tempProvisionSeqIds: this.editForm.get(['tempProvisionSeqIds'])!.value,
-      deliveryIds: this.editForm.get(['deliveryIds'])!.value,
+      tempDeliveryIds: this.editForm.get(['tempDeliveryIds'])!.value,
       lockCount: this.editForm.get(['lockCount'])!.value,
       createdDate: this.editForm.get(['createdDate'])!.value
         ? moment(this.editForm.get(['createdDate'])!.value, DATE_TIME_FORMAT)

@@ -74,7 +74,7 @@ describe('SubscriptionProduct e2e test', () => {
       subscriptionProductUpdatePage.setContractIdInput('contractId'),
       subscriptionProductUpdatePage.setRemarksInput('remarks'),
       subscriptionProductUpdatePage.setTempProvisionSeqIdsInput('tempProvisionSeqIds'),
-      subscriptionProductUpdatePage.setDeliveryIdsInput('deliveryIds'),
+      subscriptionProductUpdatePage.setTempDeliveryIdsInput('tempDeliveryIds'),
       subscriptionProductUpdatePage.setLockCountInput('5'),
       subscriptionProductUpdatePage.setCreatedDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       subscriptionProductUpdatePage.setCreatedByInput('createdBy'),
@@ -201,9 +201,9 @@ describe('SubscriptionProduct e2e test', () => {
       'tempProvisionSeqIds',
       'Expected TempProvisionSeqIds value to be equals to tempProvisionSeqIds'
     );
-    expect(await subscriptionProductUpdatePage.getDeliveryIdsInput()).to.eq(
-      'deliveryIds',
-      'Expected DeliveryIds value to be equals to deliveryIds'
+    expect(await subscriptionProductUpdatePage.getTempDeliveryIdsInput()).to.eq(
+      'tempDeliveryIds',
+      'Expected TempDeliveryIds value to be equals to tempDeliveryIds'
     );
     expect(await subscriptionProductUpdatePage.getLockCountInput()).to.eq('5', 'Expected lockCount value to be equals to 5');
     expect(await subscriptionProductUpdatePage.getCreatedDateInput()).to.contain(

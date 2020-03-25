@@ -48,6 +48,18 @@
                 <dd>
                     <span>{{ cfsService.tenantId }}</span>
                 </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.voiceServiceSpec">Voice Service Spec</span></dt>
+                <dd>
+                    <div *ngIf="cfsService.voiceServiceSpec">
+                        <a [routerLink]="['/voice-service-spec', cfsService.voiceServiceSpec?.id, 'view']">{{ cfsService.voiceServiceSpec?.voiceSpecId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="crmwebApp.cfsService.dataServiceSpec">Data Service Spec</span></dt>
+                <dd>
+                    <div *ngIf="cfsService.dataServiceSpec">
+                        <a [routerLink]="['/data-service-spec', cfsService.dataServiceSpec?.id, 'view']">{{ cfsService.dataServiceSpec?.dataSpecId }}</a>
+                    </div>
+                </dd>
             </dl>
 
             <button type="submit"

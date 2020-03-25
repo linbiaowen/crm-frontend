@@ -1,4 +1,6 @@
 import { Moment } from 'moment';
+import { IVoiceServiceSpec } from 'app/shared/model/voice-service-spec.model';
+import { IDataServiceSpec } from 'app/shared/model/data-service-spec.model';
 import { IProduct } from 'app/shared/model/product.model';
 
 export interface ICfsService {
@@ -13,6 +15,8 @@ export interface ICfsService {
   lastUpdatedDate?: Moment;
   lastUpdatedBy?: string;
   tenantId?: string;
+  voiceServiceSpec?: IVoiceServiceSpec;
+  dataServiceSpec?: IDataServiceSpec;
   product?: IProduct;
 }
 
@@ -29,6 +33,8 @@ export class CfsService implements ICfsService {
     public lastUpdatedDate?: Moment,
     public lastUpdatedBy?: string,
     public tenantId?: string,
+    public voiceServiceSpec?: IVoiceServiceSpec,
+    public dataServiceSpec?: IDataServiceSpec,
     public product?: IProduct
   ) {}
 }

@@ -40,6 +40,9 @@ export class CfsServiceUpdatePage {
   lastUpdatedByInput = element(by.id('field_lastUpdatedBy'));
   tenantIdInput = element(by.id('field_tenantId'));
 
+  voiceServiceSpecSelect = element(by.id('field_voiceServiceSpec'));
+  dataServiceSpecSelect = element(by.id('field_dataServiceSpec'));
+
   async getPageTitle(): Promise<string> {
     return this.pageTitle.getAttribute('jhiTranslate');
   }
@@ -122,6 +125,44 @@ export class CfsServiceUpdatePage {
 
   async getTenantIdInput(): Promise<string> {
     return await this.tenantIdInput.getAttribute('value');
+  }
+
+  async voiceServiceSpecSelectLastOption(): Promise<void> {
+    await this.voiceServiceSpecSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async voiceServiceSpecSelectOption(option: string): Promise<void> {
+    await this.voiceServiceSpecSelect.sendKeys(option);
+  }
+
+  getVoiceServiceSpecSelect(): ElementFinder {
+    return this.voiceServiceSpecSelect;
+  }
+
+  async getVoiceServiceSpecSelectedOption(): Promise<string> {
+    return await this.voiceServiceSpecSelect.element(by.css('option:checked')).getText();
+  }
+
+  async dataServiceSpecSelectLastOption(): Promise<void> {
+    await this.dataServiceSpecSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async dataServiceSpecSelectOption(option: string): Promise<void> {
+    await this.dataServiceSpecSelect.sendKeys(option);
+  }
+
+  getDataServiceSpecSelect(): ElementFinder {
+    return this.dataServiceSpecSelect;
+  }
+
+  async getDataServiceSpecSelectedOption(): Promise<string> {
+    return await this.dataServiceSpecSelect.element(by.css('option:checked')).getText();
   }
 
   async save(): Promise<void> {

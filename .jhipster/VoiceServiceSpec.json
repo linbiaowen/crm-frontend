@@ -104,7 +104,15 @@
             ]
         }
     ],
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "cfsService",
+            "otherEntityRelationshipName": "voiceServiceSpec",
+            "relationshipName": "cfsService",
+            "ownerSide": false
+        }
+    ],
     "changelogDate": "20200323154900",
     "entityTableName": "voice_service_spec",
     "dto": "no",

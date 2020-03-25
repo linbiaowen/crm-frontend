@@ -34,7 +34,7 @@ export interface ISubscriptionProduct {
   remarks?: string;
   vendorProvisionInd?: boolean;
   tempProvisionSeqIds?: string;
-  deliveryIds?: string;
+  tempDeliveryIds?: string;
   lockCount?: number;
   createdDate?: Moment;
   createdBy?: string;
@@ -78,7 +78,7 @@ export class SubscriptionProduct implements ISubscriptionProduct {
     public remarks?: string,
     public vendorProvisionInd?: boolean,
     public tempProvisionSeqIds?: string,
-    public deliveryIds?: string,
+    public tempDeliveryIds?: string,
     public lockCount?: number,
     public createdDate?: Moment,
     public createdBy?: string,

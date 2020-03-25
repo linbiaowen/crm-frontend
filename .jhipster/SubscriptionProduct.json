@@ -133,7 +133,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "deliveryIds",
+            "fieldName": "tempDeliveryIds",
             "fieldType": "String"
         },
         {

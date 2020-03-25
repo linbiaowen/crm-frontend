@@ -45,7 +45,7 @@
       "remarks": "Remarks",
       "vendorProvisionInd": "Vendor Provision Ind",
       "tempProvisionSeqIds": "Temp Provision Seq Ids",
-      "deliveryIds": "Delivery Ids",
+      "tempDeliveryIds": "Temp Delivery Ids",
       "lockCount": "Lock Count",
       "createdDate": "Created Date",
       "createdBy": "Created By",

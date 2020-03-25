@@ -1,4 +1,5 @@
 import { Moment } from 'moment';
+import { ICfsService } from 'app/shared/model/cfs-service.model';
 
 export interface IDataServiceSpec {
   id?: string;
@@ -19,6 +20,7 @@ export interface IDataServiceSpec {
   lastUpdatedDate?: Moment;
   lastUpdatedBy?: string;
   tenantId?: string;
+  cfsService?: ICfsService;
 }
 
 export class DataServiceSpec implements IDataServiceSpec {
@@ -40,6 +42,7 @@ export class DataServiceSpec implements IDataServiceSpec {
     public createdBy?: string,
     public lastUpdatedDate?: Moment,
     public lastUpdatedBy?: string,
-    public tenantId?: string
+    public tenantId?: string,
+    public cfsService?: ICfsService
   ) {}
 }

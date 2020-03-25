@@ -1,4 +1,5 @@
 import { Moment } from 'moment';
+import { ICfsService } from 'app/shared/model/cfs-service.model';
 
 export interface IVoiceServiceSpec {
   id?: string;
@@ -23,6 +24,7 @@ export interface IVoiceServiceSpec {
   lastUpdatedDate?: Moment;
   lastUpdatedBy?: string;
   tenantId?: string;
+  cfsService?: ICfsService;
 }
 
 export class VoiceServiceSpec implements IVoiceServiceSpec {
@@ -48,7 +50,8 @@ export class VoiceServiceSpec implements IVoiceServiceSpec {
     public createdBy?: string,
     public lastUpdatedDate?: Moment,
     public lastUpdatedBy?: string,
-    public tenantId?: string
+    public tenantId?: string,
+    public cfsService?: ICfsService
   ) {
     this.roamingIncomingEnabled = this.roamingIncomingEnabled || false;
     this.roamingOutgoingEnabled = this.roamingOutgoingEnabled || false;

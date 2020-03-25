@@ -88,7 +88,15 @@
             ]
         }
     ],
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "cfsService",
+            "otherEntityRelationshipName": "dataServiceSpec",
+            "relationshipName": "cfsService",
+            "ownerSide": false
+        }
+    ],
     "changelogDate": "20200323155000",
     "entityTableName": "data_service_spec",
     "dto": "no",

@@ -32,7 +32,8 @@
       "createdBy": "Created By",
       "lastUpdatedDate": "Last Updated Date",
       "lastUpdatedBy": "Last Updated By",
-      "tenantId": "Tenant Id"
+      "tenantId": "Tenant Id",
+      "cfsService": "Cfs Service"
     }
   }
 }

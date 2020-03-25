@@ -26,6 +26,8 @@
       "lastUpdatedDate": "Last Updated Date",
       "lastUpdatedBy": "Last Updated By",
       "tenantId": "Tenant Id",
+      "voiceServiceSpec": "Voice Service Spec",
+      "dataServiceSpec": "Data Service Spec",
       "product": "Product"
     }
   }

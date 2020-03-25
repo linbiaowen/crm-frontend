@@ -122,6 +122,22 @@
                         </small>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.cfsService.voiceServiceSpec" for="field_voiceServiceSpec">Voice Service Spec</label>
+                    <select class="form-control" id="field_voiceServiceSpec" name="voiceServiceSpec" formControlName="voiceServiceSpec">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="voiceServiceSpecOption.id === editForm.get('voiceServiceSpec')!.value?.id ? editForm.get('voiceServiceSpec')!.value : voiceServiceSpecOption" *ngFor="let voiceServiceSpecOption of voiceservicespecs; trackBy: trackById">{{ voiceServiceSpecOption.voiceSpecId }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.cfsService.dataServiceSpec" for="field_dataServiceSpec">Data Service Spec</label>
+                    <select class="form-control" id="field_dataServiceSpec" name="dataServiceSpec" formControlName="dataServiceSpec">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="dataServiceSpecOption.id === editForm.get('dataServiceSpec')!.value?.id ? editForm.get('dataServiceSpec')!.value : dataServiceSpecOption" *ngFor="let dataServiceSpecOption of dataservicespecs; trackBy: trackById">{{ dataServiceSpecOption.dataSpecId }}</option>
+                    </select>
+                </div>
             </div>
 
             <div>
