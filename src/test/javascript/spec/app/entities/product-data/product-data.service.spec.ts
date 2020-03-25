@@ -27,7 +27,7 @@ describe('Service Tests', () => {
       elemDefault = new ProductData(
         'ID',
         'AAAAAAA',
-        0,
+        'AAAAAAA',
         'AAAAAAA',
         0,
         'AAAAAAA',
@@ -101,7 +101,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             dataId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             dataSlab: 'BBBBBB',
@@ -149,7 +149,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             dataId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             dataSlab: 'BBBBBB',

@@ -28,7 +28,7 @@ describe('Service Tests', () => {
       elemDefault = new ProductMms(
         'ID',
         'AAAAAAA',
-        0,
+        'AAAAAAA',
         'AAAAAAA',
         0,
         MmsType.LOCAL,
@@ -91,7 +91,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             mmsId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             mmsType: 'BBBBBB',
@@ -128,7 +128,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             mmsId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             mmsType: 'BBBBBB',

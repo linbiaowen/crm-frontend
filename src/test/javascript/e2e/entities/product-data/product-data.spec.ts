@@ -45,7 +45,7 @@ describe('ProductData e2e test', () => {
 
     await promise.all([
       productDataUpdatePage.setDataIdInput('dataId'),
-      productDataUpdatePage.setProductSpecIdInput('5'),
+      productDataUpdatePage.setProductIdInput('productId'),
       productDataUpdatePage.setUnitInput('unit'),
       productDataUpdatePage.setVolumeInput('5'),
       productDataUpdatePage.setDataSlabInput('dataSlab'),
@@ -73,7 +73,7 @@ describe('ProductData e2e test', () => {
     ]);
 
     expect(await productDataUpdatePage.getDataIdInput()).to.eq('dataId', 'Expected DataId value to be equals to dataId');
-    expect(await productDataUpdatePage.getProductSpecIdInput()).to.eq('5', 'Expected productSpecId value to be equals to 5');
+    expect(await productDataUpdatePage.getProductIdInput()).to.eq('productId', 'Expected ProductId value to be equals to productId');
     expect(await productDataUpdatePage.getUnitInput()).to.eq('unit', 'Expected Unit value to be equals to unit');
     expect(await productDataUpdatePage.getVolumeInput()).to.eq('5', 'Expected volume value to be equals to 5');
     expect(await productDataUpdatePage.getDataSlabInput()).to.eq('dataSlab', 'Expected DataSlab value to be equals to dataSlab');

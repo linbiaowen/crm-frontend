@@ -5,7 +5,7 @@ import { MmsType } from 'app/shared/model/enumerations/mms-type.model';
 export interface IProductMms {
   id?: string;
   mmsId?: string;
-  productSpecId?: number;
+  productId?: string;
   unit?: string;
   volume?: number;
   mmsType?: MmsType;
@@ -26,7 +26,7 @@ export class ProductMms implements IProductMms {
   constructor(
     public id?: string,
     public mmsId?: string,
-    public productSpecId?: number,
+    public productId?: string,
     public unit?: string,
     public volume?: number,
     public mmsType?: MmsType,

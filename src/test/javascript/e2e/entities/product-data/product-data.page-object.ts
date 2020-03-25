@@ -30,7 +30,7 @@ export class ProductDataUpdatePage {
   cancelButton = element(by.id('cancel-save'));
 
   dataIdInput = element(by.id('field_dataId'));
-  productSpecIdInput = element(by.id('field_productSpecId'));
+  productIdInput = element(by.id('field_productId'));
   unitInput = element(by.id('field_unit'));
   volumeInput = element(by.id('field_volume'));
   dataSlabInput = element(by.id('field_dataSlab'));
@@ -68,12 +68,12 @@ export class ProductDataUpdatePage {
     return await this.dataIdInput.getAttribute('value');
   }
 
-  async setProductSpecIdInput(productSpecId: string): Promise<void> {
-    await this.productSpecIdInput.sendKeys(productSpecId);
+  async setProductIdInput(productId: string): Promise<void> {
+    await this.productIdInput.sendKeys(productId);
   }
 
-  async getProductSpecIdInput(): Promise<string> {
-    return await this.productSpecIdInput.getAttribute('value');
+  async getProductIdInput(): Promise<string> {
+    return await this.productIdInput.getAttribute('value');
   }
 
   async setUnitInput(unit: string): Promise<void> {

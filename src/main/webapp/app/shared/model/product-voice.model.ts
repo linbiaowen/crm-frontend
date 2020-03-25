@@ -4,7 +4,7 @@ import { IProduct } from 'app/shared/model/product.model';
 export interface IProductVoice {
   id?: string;
   voiceId?: string;
-  productSpecId?: number;
+  productId?: string;
   unit?: string;
   volume?: number;
   roamingFlag?: boolean;
@@ -24,7 +24,7 @@ export class ProductVoice implements IProductVoice {
   constructor(
     public id?: string,
     public voiceId?: string,
-    public productSpecId?: number,
+    public productId?: string,
     public unit?: string,
     public volume?: number,
     public roamingFlag?: boolean,

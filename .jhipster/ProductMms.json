@@ -3,14 +3,14 @@
     "fields": [
         {
             "fieldName": "mmsId",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "productSpecId",
-            "fieldType": "Long",
+            "fieldType": "String",
             "fieldValidateRules": [
                 "required"
             ]
+        },
+        {
+            "fieldName": "productId",
+            "fieldType": "String"
         },
         {
             "fieldName": "unit",

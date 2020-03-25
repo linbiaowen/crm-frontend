@@ -24,7 +24,7 @@
                 <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="voiceId"><span jhiTranslate="crmwebApp.productVoice.voiceId">Voice Id</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="productSpecId"><span jhiTranslate="crmwebApp.productVoice.productSpecId">Product Spec Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="productId"><span jhiTranslate="crmwebApp.productVoice.productId">Product Id</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="unit"><span jhiTranslate="crmwebApp.productVoice.unit">Unit</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="volume"><span jhiTranslate="crmwebApp.productVoice.volume">Volume</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="roamingFlag"><span jhiTranslate="crmwebApp.productVoice.roamingFlag">Roaming Flag</span> <fa-icon icon="sort"></fa-icon></th>
@@ -44,7 +44,7 @@
                 <tr *ngFor="let productVoice of productVoices ;trackBy: trackId">
                     <td><a [routerLink]="['/product-voice', productVoice.id, 'view']">{{ productVoice.id }}</a></td>
                     <td>{{ productVoice.voiceId }}</td>
-                    <td>{{ productVoice.productSpecId }}</td>
+                    <td>{{ productVoice.productId }}</td>
                     <td>{{ productVoice.unit }}</td>
                     <td>{{ productVoice.volume }}</td>
                     <td>{{ productVoice.roamingFlag }}</td>

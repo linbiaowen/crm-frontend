@@ -28,7 +28,7 @@ describe('Service Tests', () => {
       elemDefault = new ProductSms(
         'ID',
         'AAAAAAA',
-        0,
+        'AAAAAAA',
         'AAAAAAA',
         0,
         SmsType.LOCAL,
@@ -91,7 +91,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             smsId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             smsType: 'BBBBBB',
@@ -128,7 +128,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             smsId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             smsType: 'BBBBBB',

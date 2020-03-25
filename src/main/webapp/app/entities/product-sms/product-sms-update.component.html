@@ -15,22 +15,18 @@
                     <label class="form-control-label" jhiTranslate="crmwebApp.productSms.smsId" for="field_smsId">Sms Id</label>
                     <input type="text" class="form-control" name="smsId" id="field_smsId"
                            formControlName="smsId"/>
+                    <div *ngIf="editForm.get('smsId')!.invalid && (editForm.get('smsId')!.dirty || editForm.get('smsId')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('smsId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="crmwebApp.productSms.productSpecId" for="field_productSpecId">Product Spec Id</label>
-                    <input type="number" class="form-control" name="productSpecId" id="field_productSpecId"
-                           formControlName="productSpecId"/>
-                    <div *ngIf="editForm.get('productSpecId')!.invalid && (editForm.get('productSpecId')!.dirty || editForm.get('productSpecId')!.touched)">
-                        <small class="form-text text-danger"
-                               *ngIf="editForm.get('productSpecId')?.errors?.required" jhiTranslate="entity.validation.required">
-                        This field is required.
-                        </small>
-                        <small class="form-text text-danger"
-                            [hidden]="!editForm.get('productSpecId')?.errors?.number" jhiTranslate="entity.validation.number">
-                            This field should be a number.
-                        </small>
-                    </div>
+                    <label class="form-control-label" jhiTranslate="crmwebApp.productSms.productId" for="field_productId">Product Id</label>
+                    <input type="text" class="form-control" name="productId" id="field_productId"
+                           formControlName="productId"/>
                 </div>
 
                 <div class="form-group">

@@ -19,8 +19,8 @@ export class ProductVoiceUpdateComponent implements OnInit {
 
   editForm = this.fb.group({
     id: [],
-    voiceId: [],
-    productSpecId: [null, [Validators.required]],
+    voiceId: [null, [Validators.required]],
+    productId: [],
     unit: [null, [Validators.required]],
     volume: [null, [Validators.required]],
     roamingFlag: [],
@@ -53,7 +53,7 @@ export class ProductVoiceUpdateComponent implements OnInit {
     this.editForm.patchValue({
       id: productVoice.id,
       voiceId: productVoice.voiceId,
-      productSpecId: productVoice.productSpecId,
+      productId: productVoice.productId,
       unit: productVoice.unit,
       volume: productVoice.volume,
       roamingFlag: productVoice.roamingFlag,
@@ -88,7 +88,7 @@ export class ProductVoiceUpdateComponent implements OnInit {
       ...new ProductVoice(),
       id: this.editForm.get(['id'])!.value,
       voiceId: this.editForm.get(['voiceId'])!.value,
-      productSpecId: this.editForm.get(['productSpecId'])!.value,
+      productId: this.editForm.get(['productId'])!.value,
       unit: this.editForm.get(['unit'])!.value,
       volume: this.editForm.get(['volume'])!.value,
       roamingFlag: this.editForm.get(['roamingFlag'])!.value,

@@ -24,7 +24,7 @@
                 <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="mmsId"><span jhiTranslate="crmwebApp.productMms.mmsId">Mms Id</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="productSpecId"><span jhiTranslate="crmwebApp.productMms.productSpecId">Product Spec Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="productId"><span jhiTranslate="crmwebApp.productMms.productId">Product Id</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="unit"><span jhiTranslate="crmwebApp.productMms.unit">Unit</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="volume"><span jhiTranslate="crmwebApp.productMms.volume">Volume</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="mmsType"><span jhiTranslate="crmwebApp.productMms.mmsType">Mms Type</span> <fa-icon icon="sort"></fa-icon></th>
@@ -45,7 +45,7 @@
                 <tr *ngFor="let productMms of productMms ;trackBy: trackId">
                     <td><a [routerLink]="['/product-mms', productMms.id, 'view']">{{ productMms.id }}</a></td>
                     <td>{{ productMms.mmsId }}</td>
-                    <td>{{ productMms.productSpecId }}</td>
+                    <td>{{ productMms.productId }}</td>
                     <td>{{ productMms.unit }}</td>
                     <td>{{ productMms.volume }}</td>
                     <td jhiTranslate="{{ 'crmwebApp.MmsType.' + productMms.mmsType }}">{{ productMms.mmsType }}</td>

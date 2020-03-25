@@ -17,7 +17,7 @@
         "title": "Product Data"
       },
       "dataId": "Data Id",
-      "productSpecId": "Product Spec Id",
+      "productId": "Product Id",
       "unit": "Unit",
       "volume": "Volume",
       "dataSlab": "Data Slab",

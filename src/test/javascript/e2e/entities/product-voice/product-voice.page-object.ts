@@ -30,7 +30,7 @@ export class ProductVoiceUpdatePage {
   cancelButton = element(by.id('cancel-save'));
 
   voiceIdInput = element(by.id('field_voiceId'));
-  productSpecIdInput = element(by.id('field_productSpecId'));
+  productIdInput = element(by.id('field_productId'));
   unitInput = element(by.id('field_unit'));
   volumeInput = element(by.id('field_volume'));
   roamingFlagInput = element(by.id('field_roamingFlag'));
@@ -56,12 +56,12 @@ export class ProductVoiceUpdatePage {
     return await this.voiceIdInput.getAttribute('value');
   }
 
-  async setProductSpecIdInput(productSpecId: string): Promise<void> {
-    await this.productSpecIdInput.sendKeys(productSpecId);
+  async setProductIdInput(productId: string): Promise<void> {
+    await this.productIdInput.sendKeys(productId);
   }
 
-  async getProductSpecIdInput(): Promise<string> {
-    return await this.productSpecIdInput.getAttribute('value');
+  async getProductIdInput(): Promise<string> {
+    return await this.productIdInput.getAttribute('value');
   }
 
   async setUnitInput(unit: string): Promise<void> {

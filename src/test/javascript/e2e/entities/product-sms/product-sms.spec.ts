@@ -42,7 +42,7 @@ describe('ProductSms e2e test', () => {
 
     await promise.all([
       productSmsUpdatePage.setSmsIdInput('smsId'),
-      productSmsUpdatePage.setProductSpecIdInput('5'),
+      productSmsUpdatePage.setProductIdInput('productId'),
       productSmsUpdatePage.setUnitInput('unit'),
       productSmsUpdatePage.setVolumeInput('5'),
       productSmsUpdatePage.smsTypeSelectLastOption(),
@@ -58,7 +58,7 @@ describe('ProductSms e2e test', () => {
     ]);
 
     expect(await productSmsUpdatePage.getSmsIdInput()).to.eq('smsId', 'Expected SmsId value to be equals to smsId');
-    expect(await productSmsUpdatePage.getProductSpecIdInput()).to.eq('5', 'Expected productSpecId value to be equals to 5');
+    expect(await productSmsUpdatePage.getProductIdInput()).to.eq('productId', 'Expected ProductId value to be equals to productId');
     expect(await productSmsUpdatePage.getUnitInput()).to.eq('unit', 'Expected Unit value to be equals to unit');
     expect(await productSmsUpdatePage.getVolumeInput()).to.eq('5', 'Expected volume value to be equals to 5');
     const selectedRoamingAllowed = productSmsUpdatePage.getRoamingAllowedInput();

@@ -30,7 +30,7 @@ export class ProductSmsUpdatePage {
   cancelButton = element(by.id('cancel-save'));
 
   smsIdInput = element(by.id('field_smsId'));
-  productSpecIdInput = element(by.id('field_productSpecId'));
+  productIdInput = element(by.id('field_productId'));
   unitInput = element(by.id('field_unit'));
   volumeInput = element(by.id('field_volume'));
   smsTypeSelect = element(by.id('field_smsType'));
@@ -57,12 +57,12 @@ export class ProductSmsUpdatePage {
     return await this.smsIdInput.getAttribute('value');
   }
 
-  async setProductSpecIdInput(productSpecId: string): Promise<void> {
-    await this.productSpecIdInput.sendKeys(productSpecId);
+  async setProductIdInput(productId: string): Promise<void> {
+    await this.productIdInput.sendKeys(productId);
   }
 
-  async getProductSpecIdInput(): Promise<string> {
-    return await this.productSpecIdInput.getAttribute('value');
+  async getProductIdInput(): Promise<string> {
+    return await this.productIdInput.getAttribute('value');
   }
 
   async setUnitInput(unit: string): Promise<void> {

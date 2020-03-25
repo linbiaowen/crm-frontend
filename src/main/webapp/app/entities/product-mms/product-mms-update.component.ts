@@ -19,8 +19,8 @@ export class ProductMmsUpdateComponent implements OnInit {
 
   editForm = this.fb.group({
     id: [],
-    mmsId: [],
-    productSpecId: [null, [Validators.required]],
+    mmsId: [null, [Validators.required]],
+    productId: [],
     unit: [null, [Validators.required]],
     volume: [null, [Validators.required]],
     mmsType: [],
@@ -54,7 +54,7 @@ export class ProductMmsUpdateComponent implements OnInit {
     this.editForm.patchValue({
       id: productMms.id,
       mmsId: productMms.mmsId,
-      productSpecId: productMms.productSpecId,
+      productId: productMms.productId,
       unit: productMms.unit,
       volume: productMms.volume,
       mmsType: productMms.mmsType,
@@ -90,7 +90,7 @@ export class ProductMmsUpdateComponent implements OnInit {
       ...new ProductMms(),
       id: this.editForm.get(['id'])!.value,
       mmsId: this.editForm.get(['mmsId'])!.value,
-      productSpecId: this.editForm.get(['productSpecId'])!.value,
+      productId: this.editForm.get(['productId'])!.value,
       unit: this.editForm.get(['unit'])!.value,
       volume: this.editForm.get(['volume'])!.value,
       mmsType: this.editForm.get(['mmsType'])!.value,

@@ -5,7 +5,7 @@ import { SmsType } from 'app/shared/model/enumerations/sms-type.model';
 export interface IProductSms {
   id?: string;
   smsId?: string;
-  productSpecId?: number;
+  productId?: string;
   unit?: string;
   volume?: number;
   smsType?: SmsType;
@@ -26,7 +26,7 @@ export class ProductSms implements IProductSms {
   constructor(
     public id?: string,
     public smsId?: string,
-    public productSpecId?: number,
+    public productId?: string,
     public unit?: string,
     public volume?: number,
     public smsType?: SmsType,

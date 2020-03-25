@@ -27,7 +27,7 @@ describe('Service Tests', () => {
       elemDefault = new ProductVoice(
         'ID',
         'AAAAAAA',
-        0,
+        'AAAAAAA',
         'AAAAAAA',
         0,
         false,
@@ -89,7 +89,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             voiceId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             roamingFlag: true,
@@ -125,7 +125,7 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             voiceId: 'BBBBBB',
-            productSpecId: 1,
+            productId: 'BBBBBB',
             unit: 'BBBBBB',
             volume: 1,
             roamingFlag: true,

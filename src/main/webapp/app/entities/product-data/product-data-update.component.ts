@@ -19,8 +19,8 @@ export class ProductDataUpdateComponent implements OnInit {
 
   editForm = this.fb.group({
     id: [],
-    dataId: [],
-    productSpecId: [null, [Validators.required]],
+    dataId: [null, [Validators.required]],
+    productId: [],
     unit: [null, [Validators.required]],
     volume: [null, [Validators.required]],
     dataSlab: [],
@@ -65,7 +65,7 @@ export class ProductDataUpdateComponent implements OnInit {
     this.editForm.patchValue({
       id: productData.id,
       dataId: productData.dataId,
-      productSpecId: productData.productSpecId,
+      productId: productData.productId,
       unit: productData.unit,
       volume: productData.volume,
       dataSlab: productData.dataSlab,
@@ -112,7 +112,7 @@ export class ProductDataUpdateComponent implements OnInit {
       ...new ProductData(),
       id: this.editForm.get(['id'])!.value,
       dataId: this.editForm.get(['dataId'])!.value,
-      productSpecId: this.editForm.get(['productSpecId'])!.value,
+      productId: this.editForm.get(['productId'])!.value,
       unit: this.editForm.get(['unit'])!.value,
       volume: this.editForm.get(['volume'])!.value,
       dataSlab: this.editForm.get(['dataSlab'])!.value,

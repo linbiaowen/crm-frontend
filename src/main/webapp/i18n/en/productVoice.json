@@ -17,7 +17,7 @@
         "title": "Product Voice"
       },
       "voiceId": "Voice Id",
-      "productSpecId": "Product Spec Id",
+      "productId": "Product Id",
       "unit": "Unit",
       "volume": "Volume",
       "roamingFlag": "Roaming Flag",

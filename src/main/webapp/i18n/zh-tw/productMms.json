@@ -17,7 +17,7 @@
         "title": "Product Mms"
       },
       "mmsId": "Mms Id",
-      "productSpecId": "Product Spec Id",
+      "productId": "Product Id",
       "unit": "Unit",
       "volume": "Volume",
       "mmsType": "Mms Type",

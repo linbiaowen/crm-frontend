@@ -17,7 +17,7 @@
         "title": "Product Sms"
       },
       "smsId": "Sms Id",
-      "productSpecId": "Product Spec Id",
+      "productId": "Product Id",
       "unit": "Unit",
       "volume": "Volume",
       "smsType": "Sms Type",

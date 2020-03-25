@@ -4,7 +4,7 @@ import { IProduct } from 'app/shared/model/product.model';
 export interface IProductData {
   id?: string;
   dataId?: string;
-  productSpecId?: number;
+  productId?: string;
   unit?: string;
   volume?: number;
   dataSlab?: string;
@@ -36,7 +36,7 @@ export class ProductData implements IProductData {
   constructor(
     public id?: string,
     public dataId?: string,
-    public productSpecId?: number,
+    public productId?: string,
     public unit?: string,
     public volume?: number,
     public dataSlab?: string,

@@ -45,7 +45,7 @@ describe('ProductVoice e2e test', () => {
 
     await promise.all([
       productVoiceUpdatePage.setVoiceIdInput('voiceId'),
-      productVoiceUpdatePage.setProductSpecIdInput('5'),
+      productVoiceUpdatePage.setProductIdInput('productId'),
       productVoiceUpdatePage.setUnitInput('unit'),
       productVoiceUpdatePage.setVolumeInput('5'),
       productVoiceUpdatePage.setMinTransferQuotaInput('5'),
@@ -60,7 +60,7 @@ describe('ProductVoice e2e test', () => {
     ]);
 
     expect(await productVoiceUpdatePage.getVoiceIdInput()).to.eq('voiceId', 'Expected VoiceId value to be equals to voiceId');
-    expect(await productVoiceUpdatePage.getProductSpecIdInput()).to.eq('5', 'Expected productSpecId value to be equals to 5');
+    expect(await productVoiceUpdatePage.getProductIdInput()).to.eq('productId', 'Expected ProductId value to be equals to productId');
     expect(await productVoiceUpdatePage.getUnitInput()).to.eq('unit', 'Expected Unit value to be equals to unit');
     expect(await productVoiceUpdatePage.getVolumeInput()).to.eq('5', 'Expected volume value to be equals to 5');
     const selectedRoamingFlag = productVoiceUpdatePage.getRoamingFlagInput();
