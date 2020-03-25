@@ -14,6 +14,10 @@
             "fieldValues": "APP,WEB"
         },
         {
+            "fieldName": "displaySeq",
+            "fieldType": "Integer"
+        },
+        {
             "fieldName": "image",
             "fieldType": "byte[]",
             "fieldTypeBlobContent": "image"

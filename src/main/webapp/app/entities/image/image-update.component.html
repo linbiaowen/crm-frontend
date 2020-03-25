@@ -36,6 +36,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmwebApp.image.displaySeq" for="field_displaySeq">Display Seq</label>
+                    <input type="number" class="form-control" name="displaySeq" id="field_displaySeq"
+                           formControlName="displaySeq"/>
+                </div>
+
+                <div class="form-group">
                     <label class="form-control-label" jhiTranslate="crmwebApp.image.image" for="field_image">Image</label>
                     <div>
                         <img [src]="'data:' + editForm.get('imageContentType')!.value + ';base64,' + editForm.get('image')!.value" style="max-height: 100px;" *ngIf="editForm.get('image')!.value" alt="image image"/>

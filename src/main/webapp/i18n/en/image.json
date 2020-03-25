@@ -18,6 +18,7 @@
       },
       "imageId": "Image Id",
       "imageType": "Image Type",
+      "displaySeq": "Display Seq",
       "image": "Image",
       "remark": "Remark",
       "lockCount": "Lock Count",

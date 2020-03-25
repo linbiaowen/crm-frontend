@@ -47,6 +47,7 @@ describe('Image e2e test', () => {
     await promise.all([
       imageUpdatePage.setImageIdInput('5'),
       imageUpdatePage.imageTypeSelectLastOption(),
+      imageUpdatePage.setDisplaySeqInput('5'),
       imageUpdatePage.setImageInput(absolutePath),
       imageUpdatePage.setRemarkInput('remark'),
       imageUpdatePage.setLockCountInput('5'),
@@ -60,6 +61,7 @@ describe('Image e2e test', () => {
     ]);
 
     expect(await imageUpdatePage.getImageIdInput()).to.eq('5', 'Expected imageId value to be equals to 5');
+    expect(await imageUpdatePage.getDisplaySeqInput()).to.eq('5', 'Expected displaySeq value to be equals to 5');
     expect(await imageUpdatePage.getImageInput()).to.endsWith(fileNameToUpload, 'Expected Image value to be end with ' + fileNameToUpload);
     expect(await imageUpdatePage.getRemarkInput()).to.eq('remark', 'Expected Remark value to be equals to remark');
     expect(await imageUpdatePage.getLockCountInput()).to.eq('5', 'Expected lockCount value to be equals to 5');

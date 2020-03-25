@@ -16,6 +16,10 @@
                 <dd>
                     <span jhiTranslate="{{ 'crmwebApp.ImageType.' + image.imageType }}">{{ image.imageType }}</span>
                 </dd>
+                <dt><span jhiTranslate="crmwebApp.image.displaySeq">Display Seq</span></dt>
+                <dd>
+                    <span>{{ image.displaySeq }}</span>
+                </dd>
                 <dt><span jhiTranslate="crmwebApp.image.image">Image</span></dt>
                 <dd>
                     <div *ngIf="image.image">

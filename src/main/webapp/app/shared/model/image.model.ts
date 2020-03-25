@@ -7,6 +7,7 @@ export interface IImage {
   id?: string;
   imageId?: number;
   imageType?: ImageType;
+  displaySeq?: number;
   imageContentType?: string;
   image?: any;
   remark?: string;
@@ -25,6 +26,7 @@ export class Image implements IImage {
     public id?: string,
     public imageId?: number,
     public imageType?: ImageType,
+    public displaySeq?: number,
     public imageContentType?: string,
     public image?: any,
     public remark?: string,

@@ -31,6 +31,7 @@ export class ImageUpdatePage {
 
   imageIdInput = element(by.id('field_imageId'));
   imageTypeSelect = element(by.id('field_imageType'));
+  displaySeqInput = element(by.id('field_displaySeq'));
   imageInput = element(by.id('file_image'));
   remarkInput = element(by.id('field_remark'));
   lockCountInput = element(by.id('field_lockCount'));
@@ -68,6 +69,14 @@ export class ImageUpdatePage {
       .all(by.tagName('option'))
       .last()
       .click();
+  }
+
+  async setDisplaySeqInput(displaySeq: string): Promise<void> {
+    await this.displaySeqInput.sendKeys(displaySeq);
+  }
+
+  async getDisplaySeqInput(): Promise<string> {
+    return await this.displaySeqInput.getAttribute('value');
   }
 
   async setImageInput(image: string): Promise<void> {

@@ -29,6 +29,7 @@ describe('Service Tests', () => {
         'ID',
         0,
         ImageType.APP,
+        0,
         'image/png',
         'AAAAAAA',
         'AAAAAAA',
@@ -88,6 +89,7 @@ describe('Service Tests', () => {
           {
             imageId: 1,
             imageType: 'BBBBBB',
+            displaySeq: 1,
             image: 'BBBBBB',
             remark: 'BBBBBB',
             lockCount: 1,
@@ -120,6 +122,7 @@ describe('Service Tests', () => {
           {
             imageId: 1,
             imageType: 'BBBBBB',
+            displaySeq: 1,
             image: 'BBBBBB',
             remark: 'BBBBBB',
             lockCount: 1,

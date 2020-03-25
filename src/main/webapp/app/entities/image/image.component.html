@@ -25,6 +25,7 @@
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="imageId"><span jhiTranslate="crmwebApp.image.imageId">Image Id</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="imageType"><span jhiTranslate="crmwebApp.image.imageType">Image Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="displaySeq"><span jhiTranslate="crmwebApp.image.displaySeq">Display Seq</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="image"><span jhiTranslate="crmwebApp.image.image">Image</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="remark"><span jhiTranslate="crmwebApp.image.remark">Remark</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="lockCount"><span jhiTranslate="crmwebApp.image.lockCount">Lock Count</span> <fa-icon icon="sort"></fa-icon></th>
@@ -43,6 +44,7 @@
                     <td><a [routerLink]="['/image', image.id, 'view']">{{ image.id }}</a></td>
                     <td>{{ image.imageId }}</td>
                     <td jhiTranslate="{{ 'crmwebApp.ImageType.' + image.imageType }}">{{ image.imageType }}</td>
+                    <td>{{ image.displaySeq }}</td>
                     <td>
                         <a *ngIf="image.image" (click)="openFile(image.imageContentType, image.image)">
                             <img [src]="'data:' + image.imageContentType + ';base64,' + image.image" style="max-height: 30px;" alt="image image"/>
