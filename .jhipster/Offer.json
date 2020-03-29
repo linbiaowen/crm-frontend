@@ -126,7 +126,8 @@
         },
         {
             "fieldName": "offerPeriodTerm",
-            "fieldType": "String"
+            "fieldType": "OfferPeriodTerm",
+            "fieldValues": "DAYS,WEEKS,MONTHS"
         },
         {
             "fieldName": "paymentType",

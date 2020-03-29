@@ -1,0 +1,9 @@
+{
+  "crmwebApp": {
+    "SpecicalPackType": {
+      "null": "",
+      "SOCIAL": "SOCIAL",
+      "ENTERTAINMENT": "ENTERTAINMENT"
+    }
+  }
+}

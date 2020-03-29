@@ -50,8 +50,8 @@ describe('ProductData e2e test', () => {
       productDataUpdatePage.setVolumeInput('5'),
       productDataUpdatePage.setDataSlabInput('dataSlab'),
       productDataUpdatePage.setDataSpeedCategoryInput('dataSpeedCategory'),
-      productDataUpdatePage.setSpecicalPackTypeInput('specicalPackType'),
-      productDataUpdatePage.setDataServiceTypeInput('dataServiceType'),
+      productDataUpdatePage.specicalPackTypeSelectLastOption(),
+      productDataUpdatePage.dataServiceTypeSelectLastOption(),
       productDataUpdatePage.setRoamingRegionsInput('roamingRegions'),
       productDataUpdatePage.setRoamingCountriesInput('roamingCountries'),
       productDataUpdatePage.setRoamingDayPassTypeInput('roamingDayPassType'),
@@ -80,14 +80,6 @@ describe('ProductData e2e test', () => {
     expect(await productDataUpdatePage.getDataSpeedCategoryInput()).to.eq(
       'dataSpeedCategory',
       'Expected DataSpeedCategory value to be equals to dataSpeedCategory'
-    );
-    expect(await productDataUpdatePage.getSpecicalPackTypeInput()).to.eq(
-      'specicalPackType',
-      'Expected SpecicalPackType value to be equals to specicalPackType'
-    );
-    expect(await productDataUpdatePage.getDataServiceTypeInput()).to.eq(
-      'dataServiceType',
-      'Expected DataServiceType value to be equals to dataServiceType'
     );
     expect(await productDataUpdatePage.getRoamingRegionsInput()).to.eq(
       'roamingRegions',

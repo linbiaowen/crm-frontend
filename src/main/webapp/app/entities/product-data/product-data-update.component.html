@@ -71,14 +71,18 @@
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="crmwebApp.productData.specicalPackType" for="field_specicalPackType">Specical Pack Type</label>
-                    <input type="text" class="form-control" name="specicalPackType" id="field_specicalPackType"
-                           formControlName="specicalPackType"/>
+                    <select class="form-control" name="specicalPackType" formControlName="specicalPackType" id="field_specicalPackType">
+                        <option value="SOCIAL">{{ 'crmwebApp.SpecicalPackType.SOCIAL' | translate }}</option>
+                        <option value="ENTERTAINMENT">{{ 'crmwebApp.SpecicalPackType.ENTERTAINMENT' | translate }}</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="crmwebApp.productData.dataServiceType" for="field_dataServiceType">Data Service Type</label>
-                    <input type="text" class="form-control" name="dataServiceType" id="field_dataServiceType"
-                           formControlName="dataServiceType"/>
+                    <select class="form-control" name="dataServiceType" formControlName="dataServiceType" id="field_dataServiceType">
+                        <option value="LOCAL">{{ 'crmwebApp.DataServiceType.LOCAL' | translate }}</option>
+                        <option value="ROAMING">{{ 'crmwebApp.DataServiceType.ROAMING' | translate }}</option>
+                    </select>
                 </div>
 
                 <div class="form-group">

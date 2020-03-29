@@ -64,7 +64,7 @@ describe('Offer e2e test', () => {
       offerUpdatePage.setAllowedActivationEndDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       offerUpdatePage.setInfoSharingOptionsInput('infoSharingOptions'),
       offerUpdatePage.setOfferPeriodInput('5'),
-      offerUpdatePage.setOfferPeriodTermInput('offerPeriodTerm'),
+      offerUpdatePage.offerPeriodTermSelectLastOption(),
       offerUpdatePage.setPaymentTypeInput('paymentType'),
       offerUpdatePage.setPriorityInput('5'),
       offerUpdatePage.setLockCountInput('5'),
@@ -185,10 +185,6 @@ describe('Offer e2e test', () => {
       'Expected InfoSharingOptions value to be equals to infoSharingOptions'
     );
     expect(await offerUpdatePage.getOfferPeriodInput()).to.eq('5', 'Expected offerPeriod value to be equals to 5');
-    expect(await offerUpdatePage.getOfferPeriodTermInput()).to.eq(
-      'offerPeriodTerm',
-      'Expected OfferPeriodTerm value to be equals to offerPeriodTerm'
-    );
     expect(await offerUpdatePage.getPaymentTypeInput()).to.eq('paymentType', 'Expected PaymentType value to be equals to paymentType');
     expect(await offerUpdatePage.getPriorityInput()).to.eq('5', 'Expected priority value to be equals to 5');
     expect(await offerUpdatePage.getLockCountInput()).to.eq('5', 'Expected lockCount value to be equals to 5');

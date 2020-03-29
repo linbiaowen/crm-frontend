@@ -35,8 +35,8 @@ export class ProductDataUpdatePage {
   volumeInput = element(by.id('field_volume'));
   dataSlabInput = element(by.id('field_dataSlab'));
   dataSpeedCategoryInput = element(by.id('field_dataSpeedCategory'));
-  specicalPackTypeInput = element(by.id('field_specicalPackType'));
-  dataServiceTypeInput = element(by.id('field_dataServiceType'));
+  specicalPackTypeSelect = element(by.id('field_specicalPackType'));
+  dataServiceTypeSelect = element(by.id('field_dataServiceType'));
   roamingRegionsInput = element(by.id('field_roamingRegions'));
   roamingCountriesInput = element(by.id('field_roamingCountries'));
   roamingDayPassTypeInput = element(by.id('field_roamingDayPassType'));
@@ -108,20 +108,34 @@ export class ProductDataUpdatePage {
     return await this.dataSpeedCategoryInput.getAttribute('value');
   }
 
-  async setSpecicalPackTypeInput(specicalPackType: string): Promise<void> {
-    await this.specicalPackTypeInput.sendKeys(specicalPackType);
+  async setSpecicalPackTypeSelect(specicalPackType: string): Promise<void> {
+    await this.specicalPackTypeSelect.sendKeys(specicalPackType);
   }
 
-  async getSpecicalPackTypeInput(): Promise<string> {
-    return await this.specicalPackTypeInput.getAttribute('value');
+  async getSpecicalPackTypeSelect(): Promise<string> {
+    return await this.specicalPackTypeSelect.element(by.css('option:checked')).getText();
   }
 
-  async setDataServiceTypeInput(dataServiceType: string): Promise<void> {
-    await this.dataServiceTypeInput.sendKeys(dataServiceType);
+  async specicalPackTypeSelectLastOption(): Promise<void> {
+    await this.specicalPackTypeSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
   }
 
-  async getDataServiceTypeInput(): Promise<string> {
-    return await this.dataServiceTypeInput.getAttribute('value');
+  async setDataServiceTypeSelect(dataServiceType: string): Promise<void> {
+    await this.dataServiceTypeSelect.sendKeys(dataServiceType);
+  }
+
+  async getDataServiceTypeSelect(): Promise<string> {
+    return await this.dataServiceTypeSelect.element(by.css('option:checked')).getText();
+  }
+
+  async dataServiceTypeSelectLastOption(): Promise<void> {
+    await this.dataServiceTypeSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
   }
 
   async setRoamingRegionsInput(roamingRegions: string): Promise<void> {

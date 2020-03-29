@@ -58,7 +58,7 @@ export class OfferUpdatePage {
   infoSharingAllowedInput = element(by.id('field_infoSharingAllowed'));
   infoSharingOptionsInput = element(by.id('field_infoSharingOptions'));
   offerPeriodInput = element(by.id('field_offerPeriod'));
-  offerPeriodTermInput = element(by.id('field_offerPeriodTerm'));
+  offerPeriodTermSelect = element(by.id('field_offerPeriodTerm'));
   paymentTypeInput = element(by.id('field_paymentType'));
   priorityInput = element(by.id('field_priority'));
   lockCountInput = element(by.id('field_lockCount'));
@@ -289,12 +289,19 @@ export class OfferUpdatePage {
     return await this.offerPeriodInput.getAttribute('value');
   }
 
-  async setOfferPeriodTermInput(offerPeriodTerm: string): Promise<void> {
-    await this.offerPeriodTermInput.sendKeys(offerPeriodTerm);
+  async setOfferPeriodTermSelect(offerPeriodTerm: string): Promise<void> {
+    await this.offerPeriodTermSelect.sendKeys(offerPeriodTerm);
   }
 
-  async getOfferPeriodTermInput(): Promise<string> {
-    return await this.offerPeriodTermInput.getAttribute('value');
+  async getOfferPeriodTermSelect(): Promise<string> {
+    return await this.offerPeriodTermSelect.element(by.css('option:checked')).getText();
+  }
+
+  async offerPeriodTermSelectLastOption(): Promise<void> {
+    await this.offerPeriodTermSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
   }
 
   async setPaymentTypeInput(paymentType: string): Promise<void> {

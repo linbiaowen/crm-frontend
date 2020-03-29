@@ -36,11 +36,13 @@
         },
         {
             "fieldName": "specicalPackType",
-            "fieldType": "String"
+            "fieldType": "SpecicalPackType",
+            "fieldValues": "SOCIAL,ENTERTAINMENT"
         },
         {
             "fieldName": "dataServiceType",
-            "fieldType": "String"
+            "fieldType": "DataServiceType",
+            "fieldValues": "LOCAL,ROAMING"
         },
         {
             "fieldName": "roamingRegions",

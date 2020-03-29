@@ -5,6 +5,7 @@ import { DATE_TIME_FORMAT } from 'app/shared/constants/input.constants';
 import { OfferService } from 'app/entities/offer/offer.service';
 import { IOffer, Offer } from 'app/shared/model/offer.model';
 import { OfferType } from 'app/shared/model/enumerations/offer-type.model';
+import { OfferPeriodTerm } from 'app/shared/model/enumerations/offer-period-term.model';
 
 describe('Service Tests', () => {
   describe('Offer Service', () => {
@@ -56,7 +57,7 @@ describe('Service Tests', () => {
         false,
         'AAAAAAA',
         0,
-        'AAAAAAA',
+        OfferPeriodTerm.DAYS,
         'AAAAAAA',
         0,
         0,

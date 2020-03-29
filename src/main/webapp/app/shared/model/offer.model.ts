@@ -8,6 +8,7 @@ import { IOfferPromotion } from 'app/shared/model/offer-promotion.model';
 import { IOfferDiscount } from 'app/shared/model/offer-discount.model';
 import { IImage } from 'app/shared/model/image.model';
 import { OfferType } from 'app/shared/model/enumerations/offer-type.model';
+import { OfferPeriodTerm } from 'app/shared/model/enumerations/offer-period-term.model';
 
 export interface IOffer {
   id?: string;
@@ -40,7 +41,7 @@ export interface IOffer {
   infoSharingAllowed?: boolean;
   infoSharingOptions?: string;
   offerPeriod?: number;
-  offerPeriodTerm?: string;
+  offerPeriodTerm?: OfferPeriodTerm;
   paymentType?: string;
   priority?: number;
   lockCount?: number;
@@ -93,7 +94,7 @@ export class Offer implements IOffer {
     public infoSharingAllowed?: boolean,
     public infoSharingOptions?: string,
     public offerPeriod?: number,
-    public offerPeriodTerm?: string,
+    public offerPeriodTerm?: OfferPeriodTerm,
     public paymentType?: string,
     public priority?: number,
     public lockCount?: number,

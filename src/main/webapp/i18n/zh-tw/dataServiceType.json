@@ -1,0 +1,9 @@
+{
+  "crmwebApp": {
+    "DataServiceType": {
+      "null": "",
+      "LOCAL": "LOCAL",
+      "ROAMING": "ROAMING"
+    }
+  }
+}

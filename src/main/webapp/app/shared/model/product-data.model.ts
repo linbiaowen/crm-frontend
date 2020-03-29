@@ -1,5 +1,7 @@
 import { Moment } from 'moment';
 import { IProduct } from 'app/shared/model/product.model';
+import { SpecicalPackType } from 'app/shared/model/enumerations/specical-pack-type.model';
+import { DataServiceType } from 'app/shared/model/enumerations/data-service-type.model';
 
 export interface IProductData {
   id?: string;
@@ -9,8 +11,8 @@ export interface IProductData {
   volume?: number;
   dataSlab?: string;
   dataSpeedCategory?: string;
-  specicalPackType?: string;
-  dataServiceType?: string;
+  specicalPackType?: SpecicalPackType;
+  dataServiceType?: DataServiceType;
   roamingRegions?: string;
   roamingCountries?: string;
   roamingDayPassType?: string;
@@ -41,8 +43,8 @@ export class ProductData implements IProductData {
     public volume?: number,
     public dataSlab?: string,
     public dataSpeedCategory?: string,
-    public specicalPackType?: string,
-    public dataServiceType?: string,
+    public specicalPackType?: SpecicalPackType,
+    public dataServiceType?: DataServiceType,
     public roamingRegions?: string,
     public roamingCountries?: string,
     public roamingDayPassType?: string,

@@ -4,6 +4,8 @@ import * as moment from 'moment';
 import { DATE_TIME_FORMAT } from 'app/shared/constants/input.constants';
 import { ProductDataService } from 'app/entities/product-data/product-data.service';
 import { IProductData, ProductData } from 'app/shared/model/product-data.model';
+import { SpecicalPackType } from 'app/shared/model/enumerations/specical-pack-type.model';
+import { DataServiceType } from 'app/shared/model/enumerations/data-service-type.model';
 
 describe('Service Tests', () => {
   describe('ProductData Service', () => {
@@ -32,8 +34,8 @@ describe('Service Tests', () => {
         0,
         'AAAAAAA',
         'AAAAAAA',
-        'AAAAAAA',
-        'AAAAAAA',
+        SpecicalPackType.SOCIAL,
+        DataServiceType.LOCAL,
         'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',

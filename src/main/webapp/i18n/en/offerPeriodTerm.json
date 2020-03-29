@@ -1,0 +1,10 @@
+{
+  "crmwebApp": {
+    "OfferPeriodTerm": {
+      "null": "",
+      "DAYS": "DAYS",
+      "WEEKS": "WEEKS",
+      "MONTHS": "MONTHS"
+    }
+  }
+}

@@ -207,8 +207,11 @@
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="crmwebApp.offer.offerPeriodTerm" for="field_offerPeriodTerm">Offer Period Term</label>
-                    <input type="text" class="form-control" name="offerPeriodTerm" id="field_offerPeriodTerm"
-                           formControlName="offerPeriodTerm"/>
+                    <select class="form-control" name="offerPeriodTerm" formControlName="offerPeriodTerm" id="field_offerPeriodTerm">
+                        <option value="DAYS">{{ 'crmwebApp.OfferPeriodTerm.DAYS' | translate }}</option>
+                        <option value="WEEKS">{{ 'crmwebApp.OfferPeriodTerm.WEEKS' | translate }}</option>
+                        <option value="MONTHS">{{ 'crmwebApp.OfferPeriodTerm.MONTHS' | translate }}</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
