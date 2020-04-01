@@ -34,7 +34,7 @@
         {
             "fieldName": "offerType",
             "fieldType": "OfferType",
-            "fieldValues": "BASE,ADDON,VAS,BUNDLE"
+            "fieldValues": "BASE,ADDON,VAS,TOPUP,BUNDLE"
         },
         {
             "fieldName": "offerPrice",
