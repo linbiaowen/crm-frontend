@@ -90,5 +90,6 @@
     "embedded": false,
     "clientRootFolder": "",
     "applications": "*",
-    "skipServer": true
+    "skipServer": true,
+    "skipClient": true
 }

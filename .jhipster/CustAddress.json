@@ -9,21 +9,6 @@
             ]
         },
         {
-            "fieldName": "accountId",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "accountType",
-            "fieldType": "AccountType",
-            "fieldValues": "CUSTOMER,SUBSCRIPTION,BILLING",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "addressType",
             "fieldType": "AddressType",
             "fieldValues": "BILLING,DELIVERY",
@@ -38,6 +23,18 @@
             "fieldValidateRules": [
                 "required"
             ]
+        },
+        {
+            "fieldName": "lockerCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiverContactNumber",
+            "fieldType": "String"
         },
         {
             "fieldName": "formattedAddress",
@@ -168,5 +165,6 @@
     "embedded": false,
     "clientRootFolder": "",
     "applications": "*",
-    "skipServer": true
+    "skipServer": true,
+    "skipClient": true
 }
