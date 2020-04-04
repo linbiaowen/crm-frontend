@@ -29,7 +29,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
                 '/login',
                 '/auth'
             ],
-            target: `http${options.tls ? 's' : ''}://localhost:8080`,
+            target: `http${options.tls ? 's' : ''}://192.168.0.100:8080`,
             secure: false,
             changeOrigin: options.tls
         }],
