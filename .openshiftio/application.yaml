@@ -6,7 +6,7 @@ metadata:
     iconClass: icon-jboss
     tags: nodejs, react, web app
     template.openshift.io/provider-display-name: "Red Hat, Inc."
-    description: Just building a little react app with a web builder
+    description: Build crm-frontend app with a web builder
 labels:
   application: crm-frontend
 parameters:
@@ -29,6 +29,11 @@ parameters:
     description: The location of the compiled static files from your web apps builder
     displayName: Output Directory
     value: build/resources/main/static/app
+    required: false
+  - name: NPM_BUILD
+    description: Override the default npm run build
+    displayName: npm build command
+    value: "npm run-script build"
     required: false
   - name: GITHUB_WEBHOOK_SECRET
     description: A secret string used to configure the GitHub webhook.
@@ -89,6 +94,8 @@ objects:
         env:
           - name: OUTPUT_DIR
             value: ${OUTPUT_DIR}
+        - name: NPM_BUILD
+            value: ${NPM_BUILD}
         from:
           kind: ImageStreamTag
           name: web-app-s2i-image:latest
