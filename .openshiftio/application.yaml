@@ -94,7 +94,7 @@ objects:
         env:
           - name: OUTPUT_DIR
             value: ${OUTPUT_DIR}
-        - name: NPM_BUILD
+          - name: NPM_BUILD
             value: ${NPM_BUILD}
         from:
           kind: ImageStreamTag
