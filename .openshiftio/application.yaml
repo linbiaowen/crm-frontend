@@ -206,7 +206,7 @@ objects:
   spec:
     ports:
     - name: http
-      port: 9000
+      port: 8080
     selector:
       app: crm-frontend-app
 - apiVersion: v1
@@ -217,7 +217,7 @@ objects:
     name: crm-frontend-app
   spec:
     port:
-      targetPort: 9000
+      targetPort: 8080
     to:
       kind: Service
       name: crm-frontend-app
