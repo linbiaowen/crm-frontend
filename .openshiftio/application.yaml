@@ -28,7 +28,7 @@ parameters:
   - name: OUTPUT_DIR
     description: The location of the compiled static files from your web apps builder
     displayName: Output Directory
-    value: build/resources/main/static/app
+    value: build/resources/main/static
     required: false
   - name: NPM_BUILD
     description: Override the default npm run build
