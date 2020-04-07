@@ -71,7 +71,7 @@ objects:
     - name: latest
       from:
         kind: DockerImage
-        name: 'centos/nginx-112-centos7:latest'
+        name: 'linbiaowen/nginx:latest'
 - apiVersion: v1
   kind: BuildConfig
   metadata:
